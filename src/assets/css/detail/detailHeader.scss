@@ -1,0 +1,41 @@
+.detail-header{
+  width: 100%;
+  .detail-img{
+    width: 100%;
+    height: rem(1080);
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .detail-introduce{
+    width: 100%;
+    height: rem(285);
+    box-sizing: border-box;
+    background: #fff;
+    padding: rem(45) rem(42) 0 rem(42);
+
+    font-size: rem(33);
+    color: #ccc;
+    text-align: left;
+    h3{
+      font-size: rem(42);
+      color: #000;
+    }
+    &>p{
+      font-size: rem(35);
+    }
+    .detail-money{
+      display: flex;
+      justify-content: space-between;
+      .detail-now{
+        font-size: rem(41);
+
+        color: #b5272d;
+      }
+      .detail-old{
+        text-decoration:line-through
+      }
+    }
+  }
+}

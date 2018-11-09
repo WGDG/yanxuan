@@ -1,0 +1,17 @@
+.detail-guige{
+  width: 100%;
+  height: rem(132);
+  background: #fff;
+  margin-top: rem(30);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 rem(11) 0 rem(44);
+  box-sizing: border-box;
+  .d-guige{
+    font-size: rem(31);
+  }
+  .i-arrow-right1{
+    font-size: rem(58);
+  }
+}

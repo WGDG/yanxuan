@@ -1,0 +1,25 @@
+.detail{
+  position: relative;
+  .top-left{
+    position: absolute;
+    top: rem(32);
+    left: rem(27);
+    width: rem(100);
+    height: rem(100);
+    border-radius: 50%;
+    border: rem(5) solid #fff;
+    padding: rem(6);
+    line-height: rem(80);
+    box-sizing: border-box;
+    .top-left-font{
+      width: rem(80);
+      height: rem(80);
+      border-radius: 50%;
+      background: #fff;
+      .i-fanhui{
+        font-size: rem(55);
+        margin-left: rem(6);
+      }
+    }
+  }
+}

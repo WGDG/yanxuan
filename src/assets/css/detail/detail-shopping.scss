@@ -1,0 +1,49 @@
+.detail-shopping{
+  width: 100%;
+  background: #fff;
+  margin-top: rem(42);
+  .detail-shopping-top{
+    width: 100%;
+    height: rem(138);
+    display: flex;
+    justify-content: space-around;
+    font-size: rem(39);
+    li{
+      width: 50%;
+      height: rem(138);
+      line-height: rem(138);
+    }
+    li:hover{
+      border-bottom: rem(2) solid red;
+      color: red;
+    }
+  }
+  .detail-shopping-content{
+    padding: rem(52) rem(16);
+  }
+}
+.detail-reviews, .detail-introduce{
+  font-size: rem(34);
+  width: 100%;
+  .m-attrList{
+    width: 100%;
+    li{
+      .name{
+        width: 100%!important;
+        text-align: left;
+      }
+      .value{
+        text-align: left;
+      }
+    }
+  }
+  p{
+    width: 100% !important;
+    img{
+      width: 100%!important;
+    }
+  }
+  img{
+    width: 100%;
+  }
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iBAAiB;EACf,KAAK,EAAE,IAAI;EACX,mBAAC;IACC,OAAO,EAAE,mBAAmB;IAC5B,SAAS,EAAE,OAAO",
+"sources": ["personal-version.scss"],
+"names": [],
+"file": "personal-version.css"
+}

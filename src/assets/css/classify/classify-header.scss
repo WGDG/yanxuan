@@ -1,0 +1,28 @@
+.ify-header{
+  width: 100%;
+  height: rem(120);
+  background: #fff;
+  border-bottom: rem(2) solid #cccccc;
+  text-align: left;
+  padding-left: rem(42);
+  position: relative;
+  box-sizing: border-box;
+  input[type=text]{
+    width: rem(700);
+    height: rem(85);
+    border-radius: rem(120);
+    text-indent: rem(99);
+    border: none;
+    outline: none;
+    background: #ccc;
+    margin-top: rem(16);
+    font-size: rem(39);
+  }
+  .i-sousuo{
+    font-size: rem(50);
+    position: absolute;
+    bottom: rem(35);
+    left: rem(66);
+    color: #999;
+  }
+}

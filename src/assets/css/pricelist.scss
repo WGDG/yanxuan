@@ -1,0 +1,12 @@
+.whole-price{
+  background: #fff;
+}
+.whole-price:before{
+  display: table;
+  content: '';
+}
+.i-fanhui{
+  float: left;
+  font-size: rem(55);
+  margin-left: rem(35);
+}

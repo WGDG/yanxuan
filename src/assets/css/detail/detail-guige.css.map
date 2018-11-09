@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAY;EACV,KAAK,EAAE,IAAI",
+"sources": ["detail-guige.scss"],
+"names": [],
+"file": "detail-guige.css"
+}
