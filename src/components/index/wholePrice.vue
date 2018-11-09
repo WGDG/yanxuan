@@ -3,7 +3,8 @@
       <dl class="price-header">
         <dd ><slot name="header"><router-link :to=" { name: 'pricelist' } ">全民砍价<span class="FontFamily i-arrow-right"></span></router-link></slot></dd>
       </dl>
-        <dl class="price-shopping" v-for="(item, index) in wholeList" :key="index" @click = 'jump(item.id)'>
+      <router-link :to="{ name: 'detail', params: { id: item.id} }"  v-for="(item, index) in wholeList" :key="index">
+        <dl class="price-shopping">
           <dt>
             <img :src="item.pic" alt="">
           </dt>
@@ -26,6 +27,8 @@
             </ul>
           </dd>
         </dl>
+      </router-link>
+
     </div>
 </template>
 
@@ -46,21 +49,6 @@ export default {
       })
       this.wholeList = list
     })
-  },
-  methods:{
-    jump(id){
-      Axios.post('https://api.it120.cc/small4/shop/goods/detail?id=' + id).then(res => {
-        let { data } = res.data
-        this.$store.commit('pics', data.pics)
-        this.$store.commit('basicInfo', data.basicInfo)
-        this.$store.commit('content', data.content)
-      }).then(res=>{
-        this.$router.push({
-          name:"detail",
-          params:{id:id}
-        })
-      })
-    }
   }
 }
 </script>

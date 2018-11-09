@@ -1,21 +1,22 @@
 <template>
     <div class="detail-header">
-      <swiper class="swiper-container" :options="swiperOption" ref="mySwiper" v-if="picList.length>1">
-        <swiper-slide class="swiper-slide" v-for="item,index in picList" :key="index">
+      <swiper class="swiper-container" :options="swiperOption" ref="mySwiper" v-if="picsList.length>1">
+        <swiper-slide class="swiper-slide" v-for="item,index in picsList" :key="index">
             <img :src='item.pic' alt="">
         </swiper-slide>
         <!--分页器 -->
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
       <div class="detail-introduce">
-        <h3>{{ basicInfo.name }}</h3>
-        <p>{{ basicInfo.characteristic }}</p>
+        <h3>{{ basicInfo .name }}</h3>
+        <p>{{ basicInfo .characteristic }}</p>
         <div class="detail-money">
           <p>
-            <span class="detail-now">￥{{ basicInfo.kanjiaPrice }}</span>
+            <span class="detail-now">￥{{ basicInfo .kanjiaPrice }}</span>
             <span class="detail-old">￥{{ basicInfo.originalPrice }}</span>
           </p>
-          <p>已售{{ basicInfo.commission }}件</p>
+          <p>已售{{ basicInfo .commission }}件</p>
+
         </div>
       </div>
     </div>
@@ -27,8 +28,6 @@ export default {
   name: 'carrousel',
   data(){
     return{
-      picList: [],
-      basicInfo: {},
       swiperOption: {
         autoplay: {
           delay: 3000,
@@ -48,13 +47,13 @@ export default {
   computed: {
     swiper() {
       return this.$refs.mySwiper.swiper
+    },
+    basicInfo  () {
+      return this.$store.state.basicInfo
+    },
+    picsList () {
+      return this.$store.state.picsList
     }
-  },
-  created(){
-    let { picsList } = this.$store.state
-    let { basicInfo } = this.$store.state
-    this.picList = picsList
-    this.basicInfo = basicInfo
   }
 }
 </script>
