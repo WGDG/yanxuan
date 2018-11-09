@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAY;EACV,UAAU,EAAE,IAAI;;AAElB,mBAAmB;EACjB,OAAO,EAAE,KAAK;EACd,OAAO,EAAE,EAAE;;AAEb,SAAS;EACP,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,OAAO",
+"sources": ["pricelist.scss"],
+"names": [],
+"file": "pricelist.css"
+}

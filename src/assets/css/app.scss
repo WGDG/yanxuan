@@ -1,0 +1,50 @@
+@function rem($px) {
+  @return $px / 67.5 + rem;
+}
+@import 'classify/classify';
+@import 'classify/classify-header';
+@import 'classify/classify-content';
+@import 'shoppingCart/shoppingCart';
+@import 'shoppingCart/shoppingCartHeader';
+@import 'shoppingCart/shoppingCartContent';
+@import 'personal/personal';
+@import 'personal/personal-top';
+@import 'personal/personal-advertisement';
+@import 'personal/personal-order';
+@import 'personal/personal-my';
+@import 'personal/personal-version';
+@import './pricelist.scss';
+@import 'strict/strict';
+@import 'strict/strictList';
+@import 'detail/detail';
+@import 'detail/detailHeader';
+@import 'detail/detail-guige';
+@import 'detail/detail-shopping';
+@import 'detail/detailFooter';
+@import './address.scss';
+@import 'index/Choice.scss';
+
+html,body,#app{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #000000;
+}
+ul, li, p, dl, dd, dt, h3, div, img, h4, input{
+  margin: 0;
+  padding: 0;
+}
+
+

@@ -1,0 +1,25 @@
+.personal-my{
+  width: 100%;
+  height: rem(580);
+  background: #fff;
+  ul{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: rem(60);
+    li{
+      width: 30%;
+      padding-bottom: rem(106);
+      font-size: rem(30);
+      .FontFamily{
+        font-size: rem(70);
+      }
+      .money{
+        color: #c3c3c3;
+        font-size: rem(26);
+      }
+    }
+  }
+}

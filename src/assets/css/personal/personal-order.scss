@@ -1,0 +1,40 @@
+.personal-orders{
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  padding: rem(43) 0 rem(28) 0;
+  margin-bottom: rem(25);
+  .personal-orders-top{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 rem(24) 0 rem(47);
+    .orders-top-left{
+      font-size: rem(36);
+      .i-wodedingdan{
+        font-size: rem(59);
+      }
+    }
+    .i-arrow-right1{
+      font-size: rem(37);
+    }
+  }
+  .personal-orders-wait{
+    width: 100%;
+    padding-top: rem(77);
+    ul{
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      li{
+        font-size: rem(34);
+        .FontFamily{
+          font-size: rem(74);
+        }
+      }
+
+    }
+  }
+}

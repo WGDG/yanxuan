@@ -1,0 +1,47 @@
+.strict{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  .strict-header{
+    width: 100%;
+    height: rem(185);
+    line-height: rem(185);
+    font-size: rem(40);
+  }
+}
+#isroll-container{
+  width: 100%;
+  height: rem(300);
+  .wrapper{
+    display: flex;
+    overflow: auto;
+    .swiper-slide{
+      width: rem(298);
+      height: rem(298);
+      padding-left: rem(30);
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: rem(20);
+      }
+      .suggest{
+        p:first-child{
+          font-size: 0.5926rem;
+          display: flex;
+          justify-content: space-between;
+          span:last-child{
+            color: red;
+            margin-right: 0.4148rem;
+          }
+        }
+        p:last-child{
+          font-size: 0.4593rem;
+          color: #999;
+          text-align: left;
+          margin-left: 0.4148rem;
+        }
+      }
+    }
+  }
+}
+

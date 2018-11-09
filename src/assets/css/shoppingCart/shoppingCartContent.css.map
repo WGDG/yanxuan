@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,sBAAsB;EACpB,KAAK,EAAE,IAAI;EACX,YAAY,EAAE,CAAC;EACf,QAAQ,EAAE,IAAI",
+"sources": ["shoppingCartContent.scss"],
+"names": [],
+"file": "shoppingCartContent.css"
+}

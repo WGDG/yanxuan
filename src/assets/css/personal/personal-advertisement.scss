@@ -1,0 +1,18 @@
+.personal-advertisement{
+  width: 100%;
+  height: rem(115);
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: red;
+  padding-left: rem(45);
+  margin-bottom: rem(24);
+  box-sizing: border-box;
+  .i-laba{
+    font-size: rem(45);
+  }
+  .advertisement{
+    font-size: rem(35);
+    margin-left: rem(30);
+  }
+}

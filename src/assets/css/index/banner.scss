@@ -1,0 +1,21 @@
+.swiper-container{
+  width: 100%;
+  height: 100%;
+  .swiper-pagination{
+    position: absolute;
+    bottom: 3px!important;
+  }
+}
+.swiper-pagination .swiper-pagination-bullet{
+  width: 6px;
+  height: 3px;
+  display: inline-block;
+  margin-left: 0px !important;
+  margin: 0 2px 0 1px;
+  border-radius: 3px;
+  background: #9d9d9d;
+}
+.swiper-pagination .swiper-pagination-bullet-active{
+  width: 10px;
+  background: #fff;
+}

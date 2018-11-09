@@ -1,0 +1,51 @@
+.choice{
+  width: 100%;
+  height: rem(775);
+  background: #fff;
+  .choice-header{
+    width: 100%;
+    height: rem(120);
+    line-height: rem(120);
+    font-size: rem(45);
+    .i-arrow-right{
+      font-size: rem(47);
+      margin-left: rem(18);
+    }
+  }
+  .isroll-container{
+    width: 100%;
+    height: rem(655);
+    .wrape{
+      display: flex;
+      overflow: auto;
+      width: 440%;
+      .ch-shopping{
+        width: rem(922);
+        height: rem(600);
+        margin-left: rem(26);
+        .image-box{
+          width: rem(922);
+          height: rem(500);
+        }
+        .sug{
+          text-align: left;
+          .descript{
+            font-size: rem(40);
+            font-weight: bold;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+            overflow:hidden;
+          }
+          .title{
+            font-size: rem(30);
+            color: #a3a3a3;
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+

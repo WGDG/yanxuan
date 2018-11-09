@@ -1,0 +1,59 @@
+.ify-content{
+  width: 100%;
+  background: #fff;
+  -webkit-flex: 1;
+  overflow: auto;
+  padding-top: rem(40);
+  display: flex;
+  border-bottom: rem(4) solid #cccccc;
+  .ify-content-left{
+    width: rem(265);
+    font-size: rem(40);
+    li{
+      width: 100%;
+      height: rem(101);
+      text-align: center;
+      line-height: rem(101);
+      border: rem(7) solid #fff;
+    }
+    li:hover{
+      border-left: rem(7) solid #b3212e;
+      color: #b3212e;
+    }
+  }
+  .ify-content-right{
+    width: rem(810);
+    border-left: rem(7) solid #ccc;
+    padding-left: rem(21);
+    padding-right: rem(25);
+   .ify-banner{
+     width: 100%;
+     height: rem(285);
+     img{
+       height: 100%;
+     }
+   }
+    .ify-classify{
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-top: rem(67);
+      li{
+        width: rem(245);
+        margin-left: rem(20);
+        padding-top: rem(76);
+        text-align: center;
+        font-size: rem(32);
+        .ify-image{
+          width: 100%;
+          height: rem(245);
+          margin-bottom: rem(60);
+        }
+      }
+    }
+  }
+  ._v-container[data-v-ecaca2b0]{
+    position: static;
+  }
+}
