@@ -32,9 +32,21 @@ export default {
     DetailShopping,
     DetailFooter
   },
+  data () {
+    return {
+      detailData: {}
+    }
+  },
   created(){
     let { id } = this.$route.params
-
+    Axios.post('https://api.it120.cc/small4/shop/goods/detail?id=' + id).then(res => {
+      let { data } = res.data
+      console.log(data)
+      this.detailData = data
+      this.$store.commit('pics', data.pics)
+      this.$store.commit('basicInfo', data.basicInfo)
+      this.$store.commit('content', data.content)
+    })
   },
   methods:{
     goBack(){

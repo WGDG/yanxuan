@@ -46,7 +46,7 @@ export default new Router({
       component: Strict
     },
     {
-      path: '/detail/:id',
+      path: '/detail/:id?',
       name: 'detail',
       component: Detail,
       children: [
