@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,0BAAqB;EACnB,KAAK,EAAE,IAAI",
+"sources": ["detail-choice.scss"],
+"names": [],
+"file": "detail-choice.css"
+}

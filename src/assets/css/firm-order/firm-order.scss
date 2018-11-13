@@ -1,0 +1,39 @@
+.firm-order-header{
+  width: 100%;
+  height: rem(155);
+  line-height: rem(155);
+  font-size: rem(40);
+  background: #fff;
+  .i-fanhui{
+    font-size: rem(55);
+  }
+}
+.firm-order-center{
+  width: 100%;
+  -webkit-flex: 1;
+  overflow: auto;
+}
+.firm-order-footer{
+  width: 100%;
+  height: rem(149);
+  border-top: rem(3) solid #ccc;
+  display: flex;
+  box-sizing: border-box;
+  .firm-order-footer-price{
+    width: rem(720);
+    height: rem(125);
+    line-height: rem(125);
+    background: #fff;
+    text-align: right;
+    padding-right: rem(45);
+    font-size: rem(30);
+  }
+  .submit{
+    width: rem(360);
+    height: rem(125);
+    line-height: rem(125);
+    background: #b5282e;
+    color: #fff;
+    font-size: rem(40);
+  }
+}

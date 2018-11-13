@@ -1,0 +1,30 @@
+.information{
+  width: 100%;
+  margin-top: rem(25);
+  background: #fff;
+  font-size: rem(35);
+  .distribution{
+    width: 100%;
+    height: rem(105);
+    padding: 0 rem(45);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: rem(3) solid #ccc;
+    box-sizing: border-box;
+  }
+  .remarks{
+    width: 100%;
+    height: rem(135);
+    display: flex;
+    align-items: center;
+    padding: 0 rem(45);
+    input[type=text]{
+      margin-left: rem(145);
+      width: 70%;
+      height: rem(135);
+      border: none;
+      outline: none;
+    }
+  }
+}

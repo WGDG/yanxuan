@@ -5,15 +5,18 @@
     </dl>
     <div class="isroll-container">
       <div class="wrapper wrape">
-        <dl class="ch-shopping swiper-slide" v-for="(item, index) in specialList" :key="index">
-          <dt class="ch-box">
-            <div class="image-box"><img :src="item.pic" alt=""></div>
-          </dt>
-          <dd class="sug">
-            <p class="descript">{{ item.descript }}</p>
-            <p class="title">{{ item.title }}</p>
-          </dd>
-        </dl>
+        <router-link :to="{ name: 'detailChoice', params: { id:item.id } }" v-for="(item, index) in specialList" :key="index">
+          <dl class="ch-shopping swiper-slide" >
+            <dt class="ch-box">
+              <div class="image-box"><img :src="item.pic" alt=""></div>
+            </dt>
+            <dd class="sug">
+              <p class="descript" v-html="item.descript"></p>
+              <p class="title" v-html="item.title"></p>
+            </dd>
+          </dl>
+        </router-link>
+
       </div>
     </div>
   </div>
@@ -34,7 +37,7 @@ export default {
       scrollX: true,
       scrollY: false
     }),
-    Axios.get('https://api.it120.cc/small4/cms/news/list').then(res => {
+    Axios.get('/api/cms/news/list').then(res => {
       let { data } = res.data
       this.specialList = data
       this.$store.commit('specialList', this.specialList)

@@ -23,6 +23,16 @@
 @import 'detail/detailFooter';
 @import './address.scss';
 @import 'index/Choice.scss';
+@import './detail-choice.scss';
+@import './model.scss';
+@import 'firm-order/firm-order';
+@import 'firm-order/morendizhi';
+@import 'firm-order/Product-list';
+@import 'firm-order/information';
+@import 'firm-order/shopping-price';
+@import './confirm-payment.scss';
+@import './denglu.scss';
+@import './new-address.scss';
 
 html,body,#app{
   box-sizing: border-box;

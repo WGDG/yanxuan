@@ -1,7 +1,7 @@
 <template>
 <div class="box">
   <scroller >
-    <div id="content" class="content" :on-refresh="refresh" :on-infinite="infinite">
+    <div id="content" class="content">
       <Banner></Banner>
       <Nav></Nav>
       <whole-price></whole-price>
