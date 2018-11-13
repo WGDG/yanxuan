@@ -1,12 +1,15 @@
 <template>
     <div class="personal">
-      <div class="personal-content">
-        <personal-top></personal-top>
-        <personal-advertisement></personal-advertisement>
-        <personal-orders></personal-orders>
-        <personal-my></personal-my>
-        <personal-version></personal-version>
-      </div>
+      <scroller>
+        <div class="personal-content">
+          <personal-top></personal-top>
+          <personal-advertisement></personal-advertisement>
+          <personal-orders></personal-orders>
+          <personal-my></personal-my>
+          <personal-version></personal-version>
+        </div>
+      </scroller>
+
 
       <Footer></Footer>
     </div>

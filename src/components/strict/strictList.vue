@@ -13,14 +13,10 @@
 
 <script>
 export default {
-  data(){
-    return{
-      specialList:[]
+  computed: {
+    specialList(){
+      return this.$store.state.specialList
     }
-  },
-  computed(){
-    let { specialList } = this.$store.state
-    return specialList
   }
 }
 </script>

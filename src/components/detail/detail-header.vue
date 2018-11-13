@@ -15,8 +15,20 @@
             <span class="detail-now">￥{{ basicInfo .kanjiaPrice }}</span>
             <span class="detail-old">￥{{ basicInfo.originalPrice }}</span>
           </p>
-          <p>已售{{ basicInfo .commission }}件</p>
-
+          <p class="yishou">已售{{ basicInfo .commission }}件</p>
+        </div>
+      </div>
+      <div class="your-pingtuan" v-if="basicInfo.pingtuan">
+        <div class="pingtuan-left">
+          <span>拼团价</span>
+          <span>￥<span class="pingtian-min">{{ basicInfo.pingtuanPrice }}</span></span>
+          <span class="kaituan">
+            <div>3人开团</div>
+            <div class="yuanjia">原价￥{{ basicInfo.originalPrice}}</div>
+          </span>
+        </div>
+        <div class="pingtuan-right">
+          已开团{{ basicInfo.stores }}件
         </div>
       </div>
     </div>

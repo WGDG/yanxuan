@@ -40,7 +40,7 @@ export default {
     }
   },
   mounted(){
-    Axios.get('https://api.it120.cc/small4/banner/list').then(res => {
+    Axios.get('/api/banner/list').then(res => {
       let { data } = res.data
       this.bannerList = data
     })

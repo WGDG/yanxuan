@@ -42,7 +42,7 @@ export default {
     }
   },
   created(){
-    Axios.get('https://api.it120.cc/small4/shop/goods/list').then( res => {
+    Axios.get('/api/shop/goods/list').then( res => {
       let { data } = res.data
       let list = data.filter(item => {
         return item.kanjia === true

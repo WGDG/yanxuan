@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAe;EACb,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,OAAO;EAChB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa",
+"sources": ["shopping-price.scss"],
+"names": [],
+"file": "shopping-price.css"
+}

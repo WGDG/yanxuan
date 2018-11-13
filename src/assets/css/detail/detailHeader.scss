@@ -30,12 +30,44 @@
       justify-content: space-between;
       .detail-now{
         font-size: rem(41);
-
         color: #b5272d;
       }
       .detail-old{
         text-decoration:line-through
       }
+      .yishou{
+        text-align: right;
+      }
+    }
+  }
+  .your-pingtuan{
+    width: 100%;
+    height: rem(145);
+    background: #b5282e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 rem(38);
+    font-size: rem(30);
+    color: #fff;
+    box-sizing: border-box;
+    .pingtuan-left{
+      height: rem(145);
+      display: flex;
+      align-items: center;
+      .pingtian-min{
+        font-size: rem(43);
+      }
+      .kaituan{
+        float: left;
+        padding-left: rem(38);
+        .yuanjia{
+          text-decoration:line-through
+        }
+      }
+    }
+    .pintuan-right{
+
     }
   }
 }

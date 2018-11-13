@@ -6,15 +6,11 @@
 
 <script>
 export default {
-   data(){
-     return{
-       content:''
+   computed:{
+     content() {
+       return this.$store.state.content
      }
-   },
-  created(){
-     let { content } = this.$store.state
-    this.content = content
-  }
+   }
 }
 </script>
 

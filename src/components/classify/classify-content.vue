@@ -43,7 +43,7 @@ export default {
     Banner
   },
   mounted() {
-    Axios.post('https://api.it120.cc/small4/shop/goods/category/all').then( res => {
+    Axios.post('/api/shop/goods/category/all').then( res => {
       let { data } = res.data
       this.goodsList = data
       let list = data.filter(item => {

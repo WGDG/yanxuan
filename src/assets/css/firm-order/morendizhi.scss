@@ -1,0 +1,39 @@
+.default-address{
+  width: 100%;
+  height: rem(200);
+  padding-top: rem(40);
+  box-sizing: border-box;
+  background: #fff;
+  .address-yours{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 rem(45);
+    .i-dizhi{
+      font-size: rem(38);
+      color: #ccc;
+    }
+    .yours{
+      display: flex;
+      align-items: center;
+    }
+    .address-name{
+      padding-left: rem(66);
+      li{
+        text-align: left;
+        font-size: rem(35);
+        padding-bottom: rem(40);
+      }
+      li:last-child{
+        font-size: rem(30);
+        color: #ccc;
+      }
+    }
+  }
+  .xiayibu{
+    padding-right: rem(45);
+    font-size: rem(30);
+    font-weight: bold;
+    color: #ccc;
+  }
+}

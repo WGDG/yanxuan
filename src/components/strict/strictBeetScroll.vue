@@ -12,18 +12,16 @@
 <script>
 import IScroll from 'iscroll'
 export default {
-  data(){
-    return{
-      specialList:[]
+  computed:{
+    specialList(){
+      return this.$store.state.specialList
     }
   },
-  computed(){
+  mounted(){
     new IScroll ('#isroll-container',{
       scrollX: true,
       scrollY: false
     })
-    let { specialList } = this.$store.state
-    return specialList
   }
 }
 </script>

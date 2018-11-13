@@ -18,32 +18,71 @@
     font-size: rem(38);
     color: #fff;
   }
-  .font, .youTo{
-    box-sizing: border-box;
+
+  .zhengchang{
+    width: 100%;
+    height: rem(130);
     display: flex;
-    justify-content: space-around;
     align-items: center;
-  }
-  .font{
-    font-size: rem(70);
-    .font-left{
-      width: rem(145);
-      height: rem(135);
-      line-height: rem(135);
-      border-right: rem(1) solid #cccccc;
+    .font{
+      width: rem(460);
+      height: rem(130);
+      display: flex;
+      align-items: center;
+      .font-left{
+        width: rem(150);
+        height: rem(130);
+        line-height: rem(130);
+        border-right: rem(4) solid #ccc;
+      }
     }
-  }
-  .youTo{
-    font-size: rem(40);
-    .youTo-left, .youTo-right{
-      width: rem(310);
-    }
-    .youTo-right{
-      background: #b5272d;
-      height: rem(135);
-      line-height: rem(135);
-      color: #fff;
+    .youTo{
+      width: rem(620);
+      height: rem(130);
+      display: flex;
+      align-items: center;
+      font-size: rem(40);
+      .youTo-left{
+        width: 50%;
+        height: rem(130);
+        line-height: rem(130);
+
+      }
+      .youTo-right{
+        width: 50%;
+        height: rem(130);
+        line-height: rem(130);
+        background: #b5272d;
+        color: #fff;
+      }
     }
   }
 
+  .detail-footer-pingtuan{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .font-left{
+      width: rem(150);
+      height: rem(130);
+      line-height: rem(130);
+      border-right: rem(1) solid #ccc;
+    }
+    .font-right{
+      display: flex;
+      align-items: center;
+    }
+    .yuanjia{
+      width: rem(315);
+      font-size: rem(35);
+    }
+    .kaituan{
+      padding-top: rem(20);
+      box-sizing: border-box;
+      width: rem(470);
+      height: rem(130);
+      font-size: rem(35);
+      background: #b5282e;
+    }
+  }
 }
