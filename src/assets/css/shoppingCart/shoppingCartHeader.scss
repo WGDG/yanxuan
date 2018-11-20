@@ -4,4 +4,11 @@
   background: #fff;
   font-size: rem(41);
   line-height: rem(145);
+  position: relative;
+  span{
+    position: absolute;
+    top: rem(0);
+    left: rem(28);
+    color: red;
+  }
 }

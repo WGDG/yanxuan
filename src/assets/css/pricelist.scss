@@ -1,5 +1,14 @@
 .whole-price{
   background: #fff;
+  .slot{
+    height: rem(185);
+    position: relative;
+    .fanhui{
+      position: absolute;
+      top: 0;
+      left: rem(20);
+    }
+  }
 }
 .whole-price:before{
   display: table;

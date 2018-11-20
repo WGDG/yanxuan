@@ -61,6 +61,8 @@
       height: 4.2222222222rem; }
       .ify-content .ify-content-right .ify-banner img {
         height: 100%; }
+      .ify-content .ify-content-right .ify-banner a {
+        display: inline; }
     .ify-content .ify-content-right .ify-classify {
       width: 100%;
       display: flex;
@@ -92,7 +94,13 @@
   height: 2.1481481481rem;
   background: #fff;
   font-size: 0.6074074074rem;
-  line-height: 2.1481481481rem; }
+  line-height: 2.1481481481rem;
+  position: relative; }
+  .shopping-cart-header span {
+    position: absolute;
+    top: 0rem;
+    left: 0.4148148148rem;
+    color: red; }
 
 .shopping-cart-content {
   width: 100%;
@@ -102,11 +110,72 @@
     position: static; }
 
 .cart-list {
-  width: 100%;
-  height: 9.3333333333rem; }
+  width: 100%; }
   .cart-list .null-cart {
     background: #f7f7f7;
+    height: 9.3333333333rem;
     line-height: 9.3333333333rem; }
+  .cart-list .shopping-list {
+    width: 100%;
+    border-top: 0.0444444444rem solid #ccc;
+    background: #fff; }
+    .cart-list .shopping-list .shopping-item {
+      border-bottom: 0.0444444444rem solid #ccc;
+      padding: 0.6666666667rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center; }
+      .cart-list .shopping-list .shopping-item .i-xuanzhong {
+        font-size: 0.5925925926rem;
+        color: #999; }
+      .cart-list .shopping-list .shopping-item .active {
+        color: red; }
+      .cart-list .shopping-list .shopping-item .actived {
+        color: #999; }
+      .cart-list .shopping-list .shopping-item .shopping-item-img {
+        width: 3.4074074074rem;
+        height: 3.4074074074rem;
+        margin: 0 1.1851851852rem 0 0.7407407407rem; }
+        .cart-list .shopping-list .shopping-item .shopping-item-img img {
+          border-radius: 0.4444444444rem;
+          border-bottom-right-radius: 0rem; }
+      .cart-list .shopping-list .shopping-item .shopping-name {
+        width: 8.8148148148rem;
+        height: 3.6296296296rem;
+        font-size: 0.5481481481rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+        .cart-list .shopping-list .shopping-item .shopping-name .shopping-name-button {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.4rem; }
+          .cart-list .shopping-list .shopping-item .shopping-name .shopping-name-button span {
+            color: red; }
+          .cart-list .shopping-list .shopping-item .shopping-name .shopping-name-button .number {
+            display: flex;
+            width: 3.4814814815rem;
+            height: 1.1111111111rem;
+            border-radius: 0.1481481481rem;
+            border: 0.0740740741rem solid #999; }
+            .cart-list .shopping-list .shopping-item .shopping-name .shopping-name-button .number .numbers {
+              width: 1.3777777778rem;
+              height: 1.1111111111rem;
+              line-height: 1.1111111111rem;
+              text-align: center;
+              font-size: 0.3851851852rem;
+              border-left: 0.0740740741rem solid #999;
+              border-right: 0.0740740741rem solid #999; }
+            .cart-list .shopping-list .shopping-item .shopping-name .shopping-name-button .number button {
+              width: 0.9925925926rem;
+              border: none;
+              font-size: 0.2518518519rem;
+              background: #fff;
+              outline: none; }
 
 .lovely {
   background: #fff;
@@ -268,6 +337,13 @@
 
 .whole-price {
   background: #fff; }
+  .whole-price .slot {
+    height: 2.7407407407rem;
+    position: relative; }
+    .whole-price .slot .fanhui {
+      position: absolute;
+      top: 0;
+      left: 0.2962962963rem; }
 
 .whole-price:before {
   display: table;
@@ -286,7 +362,12 @@
     width: 100%;
     height: 2.7407407407rem;
     line-height: 2.7407407407rem;
-    font-size: 0.5925925926rem; }
+    font-size: 0.5925925926rem;
+    position: relative; }
+    .strict .strict-header .i-fanhui {
+      position: absolute;
+      top: 0;
+      left: 0.4444444444rem; }
 
 #isroll-container {
   width: 100%;
@@ -497,8 +578,7 @@
 .detail-footer {
   width: 100%;
   height: 2.1481481481rem;
-  border: 0.0148148148rem solid #fff;
-  box-shadow: 1px 3px 20px 0 #999;
+  border-top: 0.0148148148rem solid #ccc;
   z-index: 1;
   background: #fff;
   display: flex;
@@ -506,7 +586,7 @@
   box-sizing: border-box; }
   .detail-footer .kanjia {
     width: 100%;
-    height: 100%;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -515,32 +595,33 @@
     color: #fff; }
   .detail-footer .zhengchang {
     width: 100%;
-    height: 1.9259259259rem;
+    height: 2rem;
     display: flex;
     align-items: center; }
     .detail-footer .zhengchang .font {
       width: 6.8148148148rem;
-      height: 1.9259259259rem;
+      height: 2rem;
       display: flex;
       align-items: center; }
       .detail-footer .zhengchang .font .font-left {
         width: 2.2222222222rem;
-        height: 1.9259259259rem;
+        height: 2rem;
+        line-height: 2rem;
         border-right: 0.0592592593rem solid #ccc; }
     .detail-footer .zhengchang .youTo {
       width: 9.1851851852rem;
-      height: 1.9259259259rem;
+      height: 2rem;
       display: flex;
       align-items: center;
       font-size: 0.5925925926rem; }
       .detail-footer .zhengchang .youTo .youTo-left {
         width: 50%;
-        height: 1.9259259259rem;
-        line-height: 1.9259259259rem; }
+        height: 2.1481481481rem;
+        line-height: 2rem; }
       .detail-footer .zhengchang .youTo .youTo-right {
         width: 50%;
-        height: 1.9259259259rem;
-        line-height: 1.9259259259rem;
+        height: 2rem;
+        line-height: 2rem;
         background: #b5272d;
         color: #fff; }
   .detail-footer .detail-footer-pingtuan {
@@ -549,8 +630,8 @@
     align-items: center; }
     .detail-footer .detail-footer-pingtuan .font-left {
       width: 2.2222222222rem;
-      height: 1.9259259259rem;
-      line-height: 1.9259259259rem;
+      height: 2rem;
+      line-height: 2rem;
       border-right: 0.0148148148rem solid #ccc; }
     .detail-footer .detail-footer-pingtuan .font-right {
       display: flex;
@@ -562,7 +643,7 @@
       padding-top: 0.2962962963rem;
       box-sizing: border-box;
       width: 6.962962963rem;
-      height: 1.9259259259rem;
+      height: 2rem;
       font-size: 0.5185185185rem;
       background: #b5282e; }
 
@@ -570,7 +651,12 @@
   width: 100%;
   height: 2.3703703704rem;
   line-height: 2.3703703704rem;
-  background: #fff; }
+  background: #fff;
+  position: relative; }
+  .address-header .i-fanhui {
+    position: absolute;
+    top: 0;
+    left: 0.2962962963rem; }
 
 .address-content {
   width: 100%;
@@ -648,7 +734,6 @@
             color: #a3a3a3; }
 
 .box .boxq {
-  padding: 0 0.4444444444rem;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -664,10 +749,12 @@
   .box .choice-detail-header .title {
     font-size: 0.562962963rem; }
 .box .choice-detail-content {
+  padding: 0 0.4444444444rem;
   width: 100%;
   -webkit-flex: 1;
   overflow: auto;
-  font-size: 0.5185185185rem; }
+  font-size: 0.5185185185rem;
+  box-sizing: border-box; }
   .box .choice-detail-content .detail-choice-content {
     text-align: left; }
 
@@ -1060,6 +1147,227 @@
       background: #fff;
       color: #000; }
 
+.footer {
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box; }
+  .footer ul {
+    width: 100%;
+    height: 2.3703703704rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-items: center;
+    font-size: 0.4444444444rem;
+    border-top: 0.0740740741rem solid #ccc; }
+    .footer ul .FontFamily {
+      font-size: 1.0814814815rem; }
+    .footer ul li a {
+      color: #000; }
+    .footer ul li .router-link-exact-active {
+      color: red; }
+  .footer .bar-foot {
+    width: 100%;
+    height: 2.1481481481rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .footer .bar-foot .bar-foot-left {
+      width: 10.8888888889rem;
+      height: 2.1481481481rem;
+      line-height: 2.1481481481rem;
+      display: flex;
+      align-items: center;
+      border: none;
+      justify-content: space-between;
+      font-size: 0.5185185185rem;
+      padding-left: 0.6222222222rem;
+      padding-right: 0.6666666667rem; }
+      .footer .bar-foot .bar-foot-left .i-xuanzhong {
+        font-size: 0.7407407407rem;
+        color: #999; }
+      .footer .bar-foot .bar-foot-left .active {
+        color: red; }
+      .footer .bar-foot .bar-foot-left .bar-foot-left-font {
+        padding-left: 0.5925925926rem; }
+    .footer .bar-foot .bar-foot-right {
+      width: 5.1111111111rem;
+      height: 2.1481481481rem;
+      line-height: 2.1481481481rem;
+      background: #b5282e;
+      font-size: 0.5925925926rem;
+      color: #fff; }
+    .footer .bar-foot .detail {
+      background: #999; }
+
+.kanjia {
+  width: 100%;
+  height: 17.7777777778rem;
+  background: #bdab85;
+  color: #fff;
+  font-size: 0.5925925926rem;
+  padding: 0 0.962962963rem;
+  box-sizing: border-box; }
+  .kanjia .kanjia-img {
+    width: 2.5925925926rem;
+    height: 2.5925925926rem;
+    border-radius: 50%;
+    margin: 1.7777777778rem auto 0 auto; }
+    .kanjia .kanjia-img img {
+      border-radius: 50%; }
+  .kanjia .jieshao {
+    margin-bottom: 0.3703703704rem; }
+  .kanjia .kanjiaShopping {
+    width: 14.1037037037rem;
+    height: 4.0740740741rem;
+    border-radius: 0.1481481481rem;
+    background: #f6edde;
+    padding: 0.1777777778rem;
+    display: flex;
+    margin-bottom: 0.7703703704rem; }
+    .kanjia .kanjiaShopping .kanjiaShopping-img {
+      width: 3.6rem;
+      height: 3.6rem;
+      border-bottom-right-radius: 0.2962962963rem; }
+      .kanjia .kanjiaShopping .kanjiaShopping-img img {
+        border-bottom-right-radius: 0.2962962963rem; }
+    .kanjia .kanjiaShopping .kanjiaShopping-title {
+      margin-left: 0.4444444444rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .kanjia .kanjiaShopping .kanjiaShopping-title .kanjiaShopping-name {
+        color: #000;
+        font-size: 0.6074074074rem; }
+      .kanjia .kanjiaShopping .kanjiaShopping-title .kanjiaShopping-price {
+        display: flex;
+        justify-content: space-between; }
+      .kanjia .kanjiaShopping .kanjiaShopping-title .kanjiaShopping-small {
+        color: #b4aa8f; }
+      .kanjia .kanjiaShopping .kanjiaShopping-title .kanjiaShopping-original {
+        color: #aeaa9e;
+        text-decoration: line-through; }
+  .kanjia .yikan {
+    margin-bottom: 1.0666666667rem; }
+  .kanjia .kanjia-button button {
+    height: 1.6296296296rem;
+    border: none;
+    outline: none;
+    border-radius: 0.1481481481rem; }
+  .kanjia .kanjia-button .my {
+    width: 6.3703703704rem;
+    background: #b4a078;
+    color: #fff; }
+  .kanjia .kanjia-button .request {
+    width: 4.3703703704rem;
+    margin-left: 0.4148148148rem;
+    background: #cebd9c;
+    color: #b4a078;
+    border: 0.0740740741rem #b4a078 solid; }
+  .kanjia .kanjiatime {
+    margin: 1.0814814815rem auto;
+    display: flex;
+    width: 5.6296296296rem;
+    justify-content: space-around; }
+    .kanjia .kanjiatime span {
+      width: 0.9777777778rem;
+      height: 0.7111111111rem;
+      line-height: 0.7111111111rem;
+      background: #b4a078;
+      border-radius: 0.1481481481rem;
+      display: block; }
+
+.kanjia-bottom {
+  width: 100%;
+  background: #fff;
+  height: 10.1481481481rem;
+  font-size: 0.5185185185rem; }
+  .kanjia-bottom .jiao {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #fff;
+    display: block;
+    margin: -0.2962962963rem auto;
+    transform: rotate(45deg); }
+  .kanjia-bottom p {
+    margin-top: 0.7703703704rem; }
+
+.login-box {
+  background: #fff; }
+  .login-box .login-header {
+    width: 100%;
+    height: 2.1481481481rem;
+    line-height: 2.1481481481rem;
+    background: #b5272d;
+    font-size: 0.7407407407rem;
+    position: relative;
+    color: #fff; }
+    .login-box .login-header .i-fanhui {
+      position: absolute;
+      left: 0.2962962963rem; }
+  .login-box .login-content {
+    padding: 0.7407407407rem;
+    box-sizing: border-box;
+    width: 100%; }
+    .login-box .login-content .login-tel {
+      width: 100%;
+      height: 2.1481481481rem;
+      border-bottom: 0.0444444444rem solid #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .login-box .login-content .login-tel .img-code {
+        display: block;
+        width: 5.9259259259rem;
+        height: 1.7777777778rem;
+        line-height: 1.7777777778rem; }
+      .login-box .login-content .login-tel .button {
+        width: 6.6666666667rem;
+        height: 1.4814814815rem;
+        border: none;
+        outline: none;
+        border-radius: 0.7407407407rem;
+        background: #b5272d;
+        color: #fff; }
+      .login-box .login-content .login-tel .active {
+        background: #999; }
+      .login-box .login-content .login-tel input {
+        padding-left: 0.1481481481rem;
+        width: 100%;
+        height: 100%;
+        font-size: 0.5925925926rem;
+        border: none;
+        outline: none; }
+  .login-box .error {
+    padding-left: 0.4444444444rem;
+    color: #b5272d;
+    font-size: 0.6666666667rem;
+    text-align: left;
+    height: 1.4814814815rem;
+    line-height: 1.4814814815rem; }
+  .login-box .login-protocol {
+    padding-left: 0.4444444444rem;
+    font-size: 0.5925925926rem;
+    text-align: left;
+    color: #999; }
+  .login-box .login-btn {
+    padding-left: 1.4814814815rem;
+    margin-top: 0.7407407407rem;
+    width: 70%;
+    height: 2.2222222222rem;
+    border-radius: 1.4814814815rem;
+    border: none;
+    outline: none;
+    background: #b5272d;
+    color: #fff;
+    font-size: 0.8888888889rem;
+    letter-spacing: 1.4814814815rem; }
+  .login-box .login-exist {
+    font-size: 0.5925925926rem;
+    height: 1.4814814815rem;
+    line-height: 1.4814814815rem;
+    color: #b5272d; }
+
 html, body, #app {
   box-sizing: border-box;
   margin: 0;
@@ -1076,6 +1384,7 @@ ul {
 
 a {
   text-decoration: none;
+  display: inline-block;
   color: #000000; }
 
 ul, li, p, dl, dd, dt, h3, div, img, h4, input {

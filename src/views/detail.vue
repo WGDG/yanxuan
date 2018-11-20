@@ -8,6 +8,8 @@
         </div>
       </scroller>
       <Model v-if="model"></Model>
+      <cart-model v-if="cartModel"></cart-model>
+      <ping-tuan-model v-if="pingtuanModel"></ping-tuan-model>
       <detail-footer></detail-footer>
 
         <div class="top-left" @click="goBack()">
@@ -27,13 +29,17 @@ import DetailShopping from '../components/detail/detail-shopping'
 import DetailFooter from '../components/detail/detail-footer'
 import Axios from 'axios'
 import Model from '../components/model'
+import CartModel from '../components/cartModel'
+import PingTuanModel from '../components/pingtuanModel'
 export default {
   components: {
     DetailHeader,
     DetailGuige,
     DetailShopping,
     DetailFooter,
-    Model
+    Model,
+    CartModel,
+    PingTuanModel
   },
   data () {
     return {
@@ -42,7 +48,8 @@ export default {
   },
   created(){
     let { id } = this.$route.params
-    Axios.post('/api/shop/goods/detail?id=' + id).then(res => {
+    Axios.post(global.globalData.api + '/shop/goods/detail?id=' + id).then(res => {
+      console.log(res);
       let { data } = res.data
       this.detailData = data
       let { properties } = res.data.data
@@ -60,6 +67,12 @@ export default {
   computed: {
     model() {
       return this.$store.state.code
+    },
+    cartModel() {
+      return this.$store.state.coding
+    },
+    pingtuanModel() {
+      return this.$store.state.pingtuancode
     }
   }
 }

@@ -33,27 +33,20 @@
             <span>购买数量</span>
             <div class="number">
               <button @click="decrement">-</button>
-              <div class="numbers" v-model="num">{{ num }}</div>
+              <div class="numbers">{{ num }}</div>
               <button @click="increment">+</button>
             </div>
           </div>
         </div>
         <!--<router-link to="/denglu"><div class="model-footer">立即购买</div></router-link>-->
-        <div class="model-footer" @click="buy" v-if="!model.kanjia">立即购买</div>
-
-          <div class="model-footer" v-if="model.kanjia" @click="buy">
-            <router-link :to="{name:'kanjia', params: { id:  basicInfo.id, basicInfo: basicInfo}}">
-            立即发起砍价，最低可看到{{ model.kanjiaPrice }}元
-            </router-link>
-          </div>
-
-
+        <div class="model-footer" @click="addToCart">加入购物车</div>
       </div>
     </div>
 </template>
 
 <script>
   import Axios from 'axios'
+  import qs from 'Qs'
 export default {
 data(){
   return {
@@ -61,39 +54,34 @@ data(){
     codes:50,
     guigec: '',// 型号
     color: '' ,// 颜色
-    token : ''
+    token : '',
+    shoppingList: []
   }
 },
 
   computed: {
     model() {
-      //console.log(this.$store.state.basicInfo);
       return this.$store.state.basicInfo
     },
     guige() {
       return this.$store.state.guige
     },
     num() {
-      console.log(this.$store.state);
       return this.$store.state.num
     }
   },
   created() {
-    let usertoken = JSON.parse(window.localStorage.getItem('usertoken'))
+    let usertoken = JSON.parse(window.localStorage.getItem('usertoken')) || []
     let {token} = usertoken
-
     Axios.post(global.globalData.api + '/user/check-token?token=' + token).then(res => {
       console.log(res);
       let {code} = res.data
-      if(code !== 0) {
-        this.$router.push( { path: '/denglu' } )
-      }
-
+      this.token = code
     })
   },
   methods: {
     demodel() {
-      this.$store.commit('demodel')
+      this.$store.commit('demodel2')
     },
     decrement() {
       this.$store.commit('decrement')
@@ -125,51 +113,42 @@ data(){
         }
       }
     },
-    buy(){
-      //console.log(this.$store.state);
-      let usertoken = JSON.parse(window.localStorage.getItem('usertoken'))
-      let {token} = usertoken
+    addToCart(){
+      console.log(this);
+      let token = 'dcb9f8f9-35ca-440d-b66a-ebe0bee13932'
       let { id } = this.$route.params
       let { basicInfo, guigecc, guigec, colorc, color, num } = this.$store.state
       let { name, pic } = basicInfo
-      if(guigecc.id) var guigeccName = guigecc.name;
-      if(guigec.id) var guigecName = guigec.name;
-      if (colorc.id) var colorcName = colorc.name;
-      if(color.id) var colorName = color.name;
-      let shopping = [
-        {
-          'goodsId': id,
-          'goodsName': basicInfo.name,
-          'number': num,
-          'originalPrice': basicInfo.originalPrice,
-          'propertyChildIds': guigecc + ':' + guigec +','+ colorc + ':' + color,
-          'logisticsType':0
-        }
-      ]
-      let datas = {
-        name,
-        pic,
-        guigeccName,
-        guigecName,
-        colorcName,
-        colorName,
-        num
-      }
       console.log(guigecc.id);
       console.log(guigec.id);
       console.log(colorc.id);
       console.log(color.id);
+      if(guigecc.id) var guigeccName = guigecc.name;
+      if(guigec.id) var guigecName = guigec.name;
+      if (colorc.id) var colorcName = colorc.name;
+      if(color.id) var colorName = color.name;
       Axios.post(global.globalData.api + '/shop/goods/price/?goodsId=' + id + '&propertyChildIds=' + guigecc.id +':'+guigec.id, colorc.id + ':' + color.id).then(res => {
+        console.log(res);
         let { code } = res.data
-        let { data } = res.data
+        let data = res.data.data
         console.log(data);
-        if( code == 0 & token !== '') {
-          this.$router.push({path : '/firmOrder'})
+        data.name = name
+        data.pic = pic
+        data.guigeccName = guigeccName
+        data.guigecName = guigecName
+        data.colorcName = colorcName
+        data.colorName = colorName
+        data.num = num
+        data.checked = true
+        console.log(data);
+        if( code == 0) {
+         // this.$store.commit('addToCart', data)
 
-          this.$store.commit('nums', {data,datas})
-
-        }else {
-          this.$router.push( { path: '/denglu' } )
+          this.$store.commit('shoppingCart',data)
+          this.$store.commit('demodel2')
+          alert('加入购物车成功')
+        }else{
+          alert('加入购物车失败')
         }
       })
 

@@ -1,0 +1,114 @@
+.kanjia{
+  width: 100%;
+  height: rem(1200);
+  background: #bdab85;
+  color: #fff;
+  font-size: rem(40);
+  padding: 0 rem(65);
+  box-sizing: border-box;
+  .kanjia-img{
+    width: rem(175);
+    height: rem(175);
+    border-radius: 50%;
+    margin: rem(120) auto 0 auto;
+    img{
+      border-radius: 50%;
+    }
+  }
+  .jieshao{
+    margin-bottom: rem(25);
+  }
+ .kanjiaShopping{
+   width: rem(952);
+   height: rem(275);
+   border-radius: rem(10);
+   background: #f6edde;
+   padding: rem(12);
+   display: flex;
+   margin-bottom: rem(52);
+   .kanjiaShopping-img{
+     width: rem(243);
+     height: rem(243);
+     border-bottom-right-radius: rem(20);
+     img{
+       border-bottom-right-radius: rem(20);
+     }
+   }
+   .kanjiaShopping-title{
+     margin-left: rem(30);
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     .kanjiaShopping-name{
+       color: #000;
+       font-size: rem(41);
+     }
+     .kanjiaShopping-price{
+       display: flex;
+       justify-content: space-between;
+     }
+     .kanjiaShopping-small{
+       color: #b4aa8f;
+     }
+     .kanjiaShopping-original{
+       color: #aeaa9e;
+       text-decoration: line-through;
+     }
+   }
+ }
+ .yikan{
+   margin-bottom: rem(72);
+ }
+  .kanjia-button{
+    button{
+      height: rem(110);
+      border: none;
+      outline: none;
+      border-radius: rem(10);
+    }
+    .my{
+      width: rem(430);
+      background: #b4a078;
+      color: #fff;
+    }
+    .request{
+      width: rem(295);
+      margin-left: rem(28);
+      background: #cebd9c;
+      color: #b4a078;
+      border: rem(5) #b4a078 solid;
+    }
+  }
+  .kanjiatime{
+    margin: rem(73) auto;
+    display: flex;
+    width: rem(380);
+    justify-content: space-around;
+    span{
+      width: rem(66);
+      height: rem(48);
+      line-height: rem(48);
+      background: #b4a078;
+      border-radius: rem(10);
+      display: block;
+    }
+  }
+}
+.kanjia-bottom{
+  width: 100%;
+  background: #fff;
+  height: rem(685);
+  font-size: rem(35);
+  //padding-top: rem(52);
+  .jiao{
+    width: rem(54);
+    height: rem(54);
+    background: #fff;
+    display: block;
+    margin: rem(-20) auto;
+    transform:rotate(45deg);
+  }
+  p{
+    margin-top: rem(52);
+  }
+}

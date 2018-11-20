@@ -43,7 +43,7 @@ export default {
     Banner
   },
   mounted() {
-    Axios.post('/api/shop/goods/category/all').then( res => {
+    Axios.post(global.globalData.api + '/shop/goods/category/all').then( res => {
       let { data } = res.data
       this.goodsList = data
       let list = data.filter(item => {
@@ -56,13 +56,13 @@ export default {
   methods: {
     // 所有分类
     all(){
-      Axios.post('https://api.it120.cc/small4/shop/goods/category/all').then( res => {
+      Axios.post(global.globalData.api + '/shop/goods/category/all').then( res => {
         let { data } = res.data
         this.goodsList = data
       })
     },
     live() {
-      Axios.post('https://api.it120.cc/small4/shop/goods/category/all').then( res => {
+      Axios.post(global.globalData.api + '/shop/goods/category/all').then( res => {
         let { data } = res.data
         let list = data.filter(item => {
           return item.type === 'jujia2'
@@ -71,7 +71,7 @@ export default {
       })
     },
     peishi(){
-      Axios.post('https://api.it120.cc/small4/shop/goods/category/all').then( res => {
+      Axios.post(global.globalData.api + '/shop/goods/category/all').then( res => {
         let { data } = res.data
         let list = data.filter(item => {
           return item.type === 'peishi2'
@@ -80,7 +80,7 @@ export default {
       })
     },
     fuzhuang(){
-      Axios.post('https://api.it120.cc/small4/shop/goods/category/all').then( res => {
+      Axios.post(global.globalData.api + '/shop/goods/category/all').then( res => {
         let { data } = res.data
         let list = data.filter(item => {
           return item.type === 'fuzhuang2'
@@ -89,7 +89,7 @@ export default {
       })
     },
     dianqi(){
-      Axios.post('https://api.it120.cc/small4/shop/goods/category/all').then( res => {
+      Axios.post(global.globalData.api + '/shop/goods/category/all').then( res => {
         let { data } = res.data
         let list = data.filter(item => {
           return item.type === 'dianqi2'

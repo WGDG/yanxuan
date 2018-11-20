@@ -11,6 +11,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import store from './store/store'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import './config/global'
 
 Vue.use(ElementUI);
 Vue.use(VueScroller)

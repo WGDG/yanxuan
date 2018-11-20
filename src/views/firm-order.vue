@@ -64,9 +64,15 @@
         return data
       },
       alprice() {
-        return  this.numbers.num * this.price.originalPrice
+        if('num is not defined'){
+          let { surplus } = JSON.parse(window.localStorage.getItem('yoursShopping'))
+          return surplus
+        }else{
+          return  this.numbers.num * this.price.originalPrice
+        }
 
-      }
+      },
+
     },
     }
 </script>

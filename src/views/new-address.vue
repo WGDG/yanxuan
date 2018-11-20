@@ -87,10 +87,11 @@
             let { address, code, mobile, linkMan } = this
             let token = 'dcb9f8f9-35ca-440d-b66a-ebe0bee13932'
             // 详细地址 邮编                  电话     联系人
-            Axios.post('/api/user/shipping-address/add?address=' + address + '&cityId=' + regions + '&code=' + code + '&districtId=' + regionss + '&linkMan=' + linkMan + '&mobile=' + mobile + '&provinceId=' + region + '&token=' + token ).then(res => {
+            Axios.post(global.globalData.api + '/user/shipping-address/add?address=' + address + '&cityId=' + regions + '&code=' + code + '&districtId=' + regionss + '&linkMan=' + linkMan + '&mobile=' + mobile + '&provinceId=' + region + '&token=' + token ).then(res => {
               console.log(res);
               let { data } = res.data
               window.localStorage.setItem('data',JSON.stringify(data))
+              window.history.back()
             })
           }
       }

@@ -46,7 +46,7 @@ export default {
   },
   created() {
     let { id } = this.$route.params
-    Axios.post('/api/shop/goods/price/?goodsId=' + id).then(res => {
+    Axios.post(global.globalData.api +'/shop/goods/price/?goodsId=' + id).then(res => {
       console.log(res);
     })
   },

@@ -1,7 +1,8 @@
 <template>
     <div class="shopping-price">
       <span>商品金额</span>
-      <span>￥{{ numbers.num * price.originalPrice}}</span>
+      <span v-if="!surplus">￥{{ numbers.num * price.originalPrice}}</span>
+      <span v-if="surplus">￥{{ surplus }}</span>
     </div>
 </template>
 
@@ -17,7 +18,11 @@
             let { data } = JSON.parse(window.localStorage.getItem('yoursShopping'))
             console.log(data);
             return data
-          }
+          },
+          surplus() {
+            let { surplus } = JSON.parse(window.localStorage.getItem('yoursShopping'))
+            return surplus
+          },
         }
     }
 </script>

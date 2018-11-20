@@ -32,7 +32,8 @@ export default {
      }
    },
   created(){
-    Axios.get('/api/shop/goods/list').then( res => {
+    //console.log(global.globalData.Api);
+    Axios.get(global.globalData.api + '/shop/goods/list').then( res => {
       let { data } = res.data
       let list = data.filter(item => {
         return item.recommendStatusStr === '推荐'

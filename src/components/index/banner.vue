@@ -40,7 +40,8 @@ export default {
     }
   },
   mounted(){
-    Axios.get('/api/banner/list').then(res => {
+    console.log(global.globalData.api);
+    Axios.get(global.globalData.api+'/banner/list').then(res => {
       let { data } = res.data
       this.bannerList = data
     })

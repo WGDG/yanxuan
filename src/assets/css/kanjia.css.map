@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAO;EACL,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,SAAS;EACjB,UAAU,EAAE,OAAO",
+"sources": ["kanjia.scss"],
+"names": [],
+"file": "kanjia.css"
+}

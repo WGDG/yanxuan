@@ -1,5 +1,23 @@
 <template>
     <div class="footer">
+      <div class="bar-foot" v-if="list">
+        <ul class="bar-foot-left" v-if="bian">
+          <li @click="checkAll">
+            <span class="FontFamily i-xuanzhong" :class="{'active':checkedAll == true}"></span>
+            <span class="bar-foot-left-font">全选</span>
+          </li>
+          <li>合计：￥{{ allNumber }}</li>
+        </ul>
+        <div class="bar-foot-right" v-if="bian" @click="">
+          下单
+        </div>
+        <ul class="bar-foot-left" v-if="!bian">
+          <li @click="checkAll"><span class="FontFamily i-xuanzhong" :class="{'active':checkedAll == true}" ></span><span class="bar-foot-left-font">全选</span></li>
+        </ul>
+        <div class="bar-foot-right detail" v-if="!bian" @click="detail">
+          删除
+        </div>
+      </div>
       <ul>
         <li>
           <router-link :to=" { name: 'index' } ">
@@ -36,7 +54,39 @@
 <script>
   import '../assets/css/footer.scss'
     export default {
-        name: "footer"
+    computed: {
+
+      bian() {
+        return this.$store.state.bian
+      },
+      checkedAll() {
+        return this.$store.state.checkAll
+      },
+      list() {
+        let numbers = JSON.stringify(window.localStorage.getItem('shoppingList'))
+        //console.log(numbers);
+        if(this.$route.path == '/shoppingCart'){
+          return this.$store.state.list
+        }
+      },
+      allNumber() {
+        let {list} = this.$store.state
+        let totalPrice = 0
+        console.log(list);
+        list.forEach( (val, index) => {
+          totalPrice += val.num * val.price
+        })
+        return totalPrice
+      }
+    },
+    methods: {
+      checkAll() {
+         this.$store.commit('checkAll')
+      },
+      detail(){
+        this.$store.commit('detail')
+      }
+    }
     }
 </script>
 

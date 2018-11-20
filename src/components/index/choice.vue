@@ -37,7 +37,7 @@ export default {
       scrollX: true,
       scrollY: false
     }),
-    Axios.get('/api/cms/news/list').then(res => {
+    Axios.get(global.globalData.api +'/cms/news/list').then(res => {
       let { data } = res.data
       this.specialList = data
       this.$store.commit('specialList', this.specialList)

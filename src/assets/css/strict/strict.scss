@@ -7,6 +7,12 @@
     height: rem(185);
     line-height: rem(185);
     font-size: rem(40);
+    position: relative;
+    .i-fanhui{
+      position: absolute;
+      top: 0;
+      left: rem(30);
+    }
   }
 }
 #isroll-container{

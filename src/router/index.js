@@ -16,11 +16,13 @@ import FirmOrder from '@/views/firm-order'
 import ConfirmPayment from '@/views/confirm-payment'
 import NewAddress from '@/views/new-address'
 import Deaddress from '@/components/address/deaddress'
+import Kanjia from '@/components/kanjia'
+import Login from '@/views/login'
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+ // mode: 'history',
   routes: [
     {
       path: '/',
@@ -103,6 +105,16 @@ export default new Router({
       path: '/deaddress/:id',
       name: 'deaddress',
       component: Deaddress
+    },
+    {
+      path: '/kanjia/:id',
+      name: 'kanjia',
+      component: Kanjia
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     }
   ]
 

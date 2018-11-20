@@ -1,9 +1,9 @@
 <template>
     <div class="personal-top">
       <ul>
-        <li class="head-sculpture">
+        <router-link class="head-sculpture" :to="{ name: 'login' }" tag="li">
           <img src="../../assets/images/6_07.gif" alt="">
-        </li>
+        </router-link>
         <li class="personal-name">
           <p class="name">初一</p>
           <p class="integral">积分：20</p>

@@ -37,7 +37,7 @@ export default {
   },
   created() {
     let { id } = this.$route.params
-    Axios.get('/api/cms/news/detail?id=' + id).then(res => {
+    Axios.get(global.globalData.api + '/cms/news/detail?id=' + id).then(res => {
       let { data } = res.data
       this.choiceList = data
       console.log(this.choiceList);

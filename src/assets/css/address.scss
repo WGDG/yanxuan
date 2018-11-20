@@ -3,6 +3,12 @@
   height: rem(160);
   line-height: rem(160);
   background: #fff;
+  position: relative;
+  .i-fanhui{
+    position: absolute;
+    top: 0;
+    left: rem(20);
+  }
 }
 .address-content{
   width: 100%;
