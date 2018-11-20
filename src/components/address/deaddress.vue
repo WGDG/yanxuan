@@ -84,8 +84,7 @@
         this.mobile = mobile
       this.address = address
       this.code = code
-      let usertoken = JSON.parse(window.localStorage.getItem('usertoken'))
-      let {token} = usertoken
+      let token = 'dcb9f8f9-35ca-440d-b66a-ebe0bee13932'
       Axios.post(global.globalData.api + '/user/shipping-address/update?token=' + token + '&id=' + id).then(res => {
         console.log(res);
       })
@@ -98,8 +97,7 @@
         console.log(this);
         let { region, regions, regionss } = this.formInline
         let { address, code, mobile, linkMan } = this
-        let usertoken = JSON.parse(window.localStorage.getItem('usertoken'))
-        let {token} = usertoken
+        let token = 'dcb9f8f9-35ca-440d-b66a-ebe0bee13932'
         // 详细地址 邮编                  电话     联系人
         Axios.post(global.globalData.api +'/user/shipping-address/add?address=' + address + '&cityId=' + regions + '&code=' + code + '&districtId=' + regionss + '&linkMan=' + linkMan + '&mobile=' + mobile + '&provinceId=' + region + '&token=' + token ).then(res => {
           console.log(res);
@@ -109,8 +107,7 @@
       },
       detail(){
         let { cityId } = this.$route.params.morenList
-        let usertoken = JSON.parse(window.localStorage.getItem('usertoken'))
-        let {token} = usertoken
+        let token = 'dcb9f8f9-35ca-440d-b66a-ebe0bee13932'
           Axios.post(global.globalData.api+ '/user/shipping-address/delete?token=' + token + '&id=' + cityId).then(res => {
             console.log(res);
             let { code } = res.data

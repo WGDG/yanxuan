@@ -76,7 +76,11 @@
           code: ''
         }
       },
-
+      created() {
+        Axios.post('https://api.it120.cc/common/region/province').then(res => {
+          console.log(res);
+        })
+      },
       methods: {
           goBack() {
             window.history.back()
