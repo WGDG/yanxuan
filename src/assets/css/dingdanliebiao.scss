@@ -1,0 +1,69 @@
+.box-dingdan{
+  background: #fff;
+  .dingdan-header{
+    width: 100%;
+    height: rem(290);
+    line-height: rem(145);
+    .header-tap{
+      display: flex;
+      height: rem(145);
+      font-size: rem(45);
+      li{
+        width: 30%;
+      }
+      li:hover{
+        border-bottom: rem(3) solid #b5272d;
+      }
+    }
+  }
+}
+.goodsMap{
+  padding: rem(30);
+  width: 100%;
+  height: rem(300);
+  box-sizing: border-box;
+  background: #fff;
+  border-top: rem(20) solid #f7f7f7;
+  .goodsMap-list{
+    display: flex;
+
+    a{
+      display: flex;
+    }
+
+    .goodsMap-img{
+      width: rem(200);
+      height: rem(200);
+    }
+    .goodsMap-title{
+      font-size: rem(40);
+      width: rem(750);
+      height: rem(200);
+      margin-left: rem(30);
+      text-align: left;
+      .shopping-now {
+        display: flex;
+        margin-top: rem(40);
+        flex-direction: column;
+        span:last-child {
+          margin-top: rem(20);
+          text-align: right;
+        }
+        .pingjia-button{
+          display: flex;
+          justify-content: space-between;
+          a{
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+.el-collapse-item__wrap{
+  padding-left: rem(30);
+  text-align: left;
+}
+.el-button.is-round{
+  padding: rem(18) rem(25)!important;
+}

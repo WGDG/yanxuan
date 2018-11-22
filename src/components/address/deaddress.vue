@@ -16,25 +16,16 @@
         <span>选择地区</span>
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
           <el-form-item>
-            <el-select v-model="formInline.region" placeholder="请选择">
-              <el-option label="北京" value="北京"></el-option>
+            <el-select v-model="formInline.region.name" placeholder="请选择" @change="city(formInline.region.name)">
+              <el-option v-model="item.name"  v-for="(item, index) in formInline.region"  :id="item.id" :key="index" ref="dataInfo"></el-option>
+            </el-select>
 
+            <el-select v-model="formInline.regions.name" placeholder="请选择" @change="pcity">
+              <el-option v-model="item.name" v-for="(item, index) in formInline.regions" :key="index"></el-option>
             </el-select>
-          </el-form-item>
-        </el-form>
-        <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item>
-            <el-select v-model="formInline.regions" placeholder="请选择">
-              <el-option label="昌平" value="昌平"></el-option>
-              <el-option label="通州" value="通州"></el-option>
-            </el-select>
-          </el-form-item>
-        </el-form>
-        <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item>
-            <el-select v-model="formInline.regionss" placeholder="请选择">
-              <el-option label="区域五" value="区域五"></el-option>
-              <el-option label="区域六" value="区域六"></el-option>
+
+            <el-select v-model="formInline.regionss.name" placeholder="请选择">
+              <el-option label="北京" value="北京"></el-option>
             </el-select>
           </el-form-item>
         </el-form>
@@ -66,8 +57,8 @@
     data() {
       return {
         formInline: {
-          region: 110000,//省
-          regions: 110112,//市、  区
+          region: [],//省
+          regions: [],//市、  区
           regionss: '',// 县
         },
         linkMan: '',
@@ -75,6 +66,12 @@
         address: '',
         code: ''
       }
+    },
+    created() {
+      Axios.post('https://api.it120.cc/common/region/province').then(res => {
+        let { data } = res.data
+        this.formInline.region = data
+      })
     },
     mounted() {
       console.log(this.$route.params);
@@ -103,6 +100,20 @@
           console.log(res);
           let { data } = res.data
           // window.localStorage.setItem('data',JSON.stringify(data))
+        })
+      },
+      city: function (city) {
+        let that = this
+        console.log(city);
+        let citys = that.formInline.region.filter(item => {
+          return item.name == city
+        })
+        that.id = citys[0].id
+        Axios.post('https://api.it120.cc/common/region/child?pid=' + that.id).then(res => {
+          console.log(res);
+          let { data } = res.data
+          this.formInline.regions = data
+          console.log(this.formInline.regions);
         })
       },
       detail(){

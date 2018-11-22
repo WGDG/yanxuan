@@ -46,4 +46,26 @@
   img{
     width: 100%;
   }
+  .pingjia-content{
+    font-size: rem(40);
+    width: 100%;
+    height: rem(200);
+    text-align: left;
+    line-height: rem(60);
+    border-bottom: rem(3) solid #ccc;
+    .pingjia-top{
+      display: flex;
+    }
+    .pingjia{
+      display: block;
+      width: rem(120);
+      height: rem(60);
+      line-height: rem(60);
+      border-radius: rem(30);
+      text-align: center;
+      color: #fff;
+      background: #b5272d;
+      margin-left: rem(10);
+    }
+  }
 }

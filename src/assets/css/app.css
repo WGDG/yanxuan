@@ -574,6 +574,25 @@
       width: 100% !important; }
   .detail-reviews img, .detail-introduce img {
     width: 100%; }
+  .detail-reviews .pingjia-content, .detail-introduce .pingjia-content {
+    font-size: 0.5925925926rem;
+    width: 100%;
+    height: 2.962962963rem;
+    text-align: left;
+    line-height: 0.8888888889rem;
+    border-bottom: 0.0444444444rem solid #ccc; }
+    .detail-reviews .pingjia-content .pingjia-top, .detail-introduce .pingjia-content .pingjia-top {
+      display: flex; }
+    .detail-reviews .pingjia-content .pingjia, .detail-introduce .pingjia-content .pingjia {
+      display: block;
+      width: 1.7777777778rem;
+      height: 0.8888888889rem;
+      line-height: 0.8888888889rem;
+      border-radius: 0.4444444444rem;
+      text-align: center;
+      color: #fff;
+      background: #b5272d;
+      margin-left: 0.1481481481rem; }
 
 .detail-footer {
   width: 100%;
@@ -1120,10 +1139,15 @@
         width: 70%;
         height: 1.7777777778rem;
         border: none; }
-      .new-address .add .contents .el-form, .new-address .add .contents demo-form-inline, .new-address .add .contents el-form--inline {
+      .new-address .add .contents .el-form, .new-address .add .contents .demo-form-inline, .new-address .add .contents .el-form--inline {
         width: 2.962962963rem; }
-        .new-address .add .contents .el-form input, .new-address .add .contents demo-form-inline input, .new-address .add .contents el-form--inline input {
+        .new-address .add .contents .el-form input, .new-address .add .contents .demo-form-inline input, .new-address .add .contents .el-form--inline input {
           padding: 0; }
+      .new-address .add .contents .el-form-item__content {
+        display: flex;
+        justify-content: space-between; }
+        .new-address .add .contents .el-form-item__content .el-select {
+          width: 2.962962963rem; }
       .new-address .add .contents .el-form-item {
         margin: 0; }
         .new-address .add .contents .el-form-item .el-input__suffix {
@@ -1367,6 +1391,95 @@
     height: 1.4814814815rem;
     line-height: 1.4814814815rem;
     color: #b5272d; }
+
+.box-dingdan {
+  background: #fff; }
+  .box-dingdan .dingdan-header {
+    width: 100%;
+    height: 4.2962962963rem;
+    line-height: 2.1481481481rem; }
+    .box-dingdan .dingdan-header .header-tap {
+      display: flex;
+      height: 2.1481481481rem;
+      font-size: 0.6666666667rem; }
+      .box-dingdan .dingdan-header .header-tap li {
+        width: 30%; }
+      .box-dingdan .dingdan-header .header-tap li:hover {
+        border-bottom: 0.0444444444rem solid #b5272d; }
+
+.goodsMap {
+  padding: 0.4444444444rem;
+  width: 100%;
+  height: 4.4444444444rem;
+  box-sizing: border-box;
+  background: #fff;
+  border-top: 0.2962962963rem solid #f7f7f7; }
+  .goodsMap .goodsMap-list {
+    display: flex; }
+    .goodsMap .goodsMap-list a {
+      display: flex; }
+    .goodsMap .goodsMap-list .goodsMap-img {
+      width: 2.962962963rem;
+      height: 2.962962963rem; }
+    .goodsMap .goodsMap-list .goodsMap-title {
+      font-size: 0.5925925926rem;
+      width: 11.1111111111rem;
+      height: 2.962962963rem;
+      margin-left: 0.4444444444rem;
+      text-align: left; }
+      .goodsMap .goodsMap-list .goodsMap-title .shopping-now {
+        display: flex;
+        margin-top: 0.5925925926rem;
+        flex-direction: column; }
+        .goodsMap .goodsMap-list .goodsMap-title .shopping-now span:last-child {
+          margin-top: 0.2962962963rem;
+          text-align: right; }
+        .goodsMap .goodsMap-list .goodsMap-title .shopping-now .pingjia-button {
+          display: flex;
+          justify-content: space-between; }
+          .goodsMap .goodsMap-list .goodsMap-title .shopping-now .pingjia-button a {
+            display: inline-block; }
+
+.el-collapse-item__wrap {
+  padding-left: 0.4444444444rem;
+  text-align: left; }
+
+.el-button.is-round {
+  padding: 0.2666666667rem 0.3703703704rem !important; }
+
+.pingjia-content {
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box; }
+  .pingjia-content .haoping {
+    width: 100%;
+    height: 2.1481481481rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    .pingjia-content .haoping button {
+      border-radius: 0.4444444444rem;
+      outline: none;
+      border: none; }
+    .pingjia-content .haoping button:hover {
+      background: #1aad19; }
+  .pingjia-content .textarea {
+    border: 0.0444444444rem solid red;
+    width: 11.8518518519rem;
+    margin: 0 auto;
+    border-radius: 0.4444444444rem; }
+    .pingjia-content .textarea textarea {
+      border: none;
+      outline: none; }
+  .pingjia-content .subpingjia {
+    text-align: right;
+    padding: 0.4444444444rem 2.2222222222rem 0.4444444444rem 0; }
+    .pingjia-content .subpingjia button {
+      width: 2.2222222222rem;
+      height: 1.1851851852rem;
+      border-radius: 0.2962962963rem;
+      border: none;
+      outline: none; }
 
 html, body, #app {
   box-sizing: border-box;

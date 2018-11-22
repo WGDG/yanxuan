@@ -103,7 +103,9 @@ let store = new Vuex.Store({
     nums(state,payLoad){
       console.log(payLoad);
       state.yoursShopping = payLoad
-      window.localStorage.setItem('yoursShopping', JSON.stringify(state.yoursShopping))
+      let tem = JSON.parse(localStorage.getItem('shoppingList')) || [];
+      tem.push(state.yoursShopping)
+      window.localStorage.setItem('yoursShopping', JSON.stringify(tem))
     },
     morenress(state,payLoad) {
       state.morenress = payLoad

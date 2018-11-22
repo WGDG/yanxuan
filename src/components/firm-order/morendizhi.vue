@@ -25,16 +25,16 @@
         morenList: []
       }
     },
-        created() {
-          let usertoken = JSON.parse(window.localStorage.getItem('usertoken'))
-          let {token} = usertoken
-          Axios.post(global.globalData.api + '/user/shipping-address/default?token=' + token).then(res => {
-            console.log(res);
-            let { data } = res.data
-            this.morenList = data
-            this.$store.commit('morenress', this.morenList)
-          })
-        }
+    created() {
+      let usertoken = JSON.parse(window.localStorage.getItem('usertoken'))
+      let {token} = usertoken
+      Axios.post(global.globalData.api + '/user/shipping-address/default?token=' + token).then(res => {
+        console.log(res);
+        let { data } = res.data
+        this.morenList = data
+        this.$store.commit('morenress', this.morenList)
+      })
+    }
     }
 
 </script>

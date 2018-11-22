@@ -18,6 +18,9 @@ import NewAddress from '@/views/new-address'
 import Deaddress from '@/components/address/deaddress'
 import Kanjia from '@/components/kanjia'
 import Login from '@/views/login'
+import Dingdanliebiao from '@/views/dingdanliebiao'
+import PingjaDetail from '@/components/pingjiaDetail'
+import Pingjia from '@/views/pingjia'
 
 Vue.use(Router)
 
@@ -115,6 +118,21 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/dingdanliebiao',
+      name: 'dingdanliebiao',
+      component: Dingdanliebiao
+    },
+    {
+      path: '/pingjiaDetail',
+      name: 'pingjiaDetail',
+      component: PingjaDetail
+    },
+    {
+      path: '/pingjia',
+      name: 'pingjia',
+      component: Pingjia
     }
   ]
 

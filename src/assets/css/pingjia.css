@@ -1,0 +1,9 @@
+.pingjia-content {
+  width: 100%; }
+  .pingjia-content .haoping {
+    width: 100%;
+    height: rem(145);
+    display: flex;
+    justify-content: space-around; }
+
+/*# sourceMappingURL=pingjia.css.map */

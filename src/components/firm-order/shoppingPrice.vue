@@ -1,7 +1,7 @@
 <template>
     <div class="shopping-price">
       <span>商品金额</span>
-      <span v-if="!surplus">￥{{ numbers.num * price.originalPrice}}</span>
+      <span v-if="!surplus">￥{{ numbers.number * price.originalPrice}}</span>
       <span v-if="surplus">￥{{ surplus }}</span>
     </div>
 </template>
@@ -10,12 +10,14 @@
     export default {
         computed: {
           numbers() {
-            let { datas } = JSON.parse(window.localStorage.getItem('yoursShopping'))
+            let data = JSON.parse(window.localStorage.getItem('yoursShopping'))
+            let { datas } = data[0]
             console.log(datas);
             return datas
           },
           price() {
-            let { data } = JSON.parse(window.localStorage.getItem('yoursShopping'))
+            let datas = JSON.parse(window.localStorage.getItem('yoursShopping'))
+            let { data } = datas[0]
             console.log(data);
             return data
           },

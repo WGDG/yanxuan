@@ -25,10 +25,17 @@
         height: rem(120);
         border: none;
       }
-      .el-form, demo-form-inline, el-form--inline{
+      .el-form, .demo-form-inline, .el-form--inline{
         width: rem(200);
         input{
           padding: 0;
+        }
+      }
+      .el-form-item__content{
+        display: flex;
+        justify-content: space-between;
+        .el-select{
+          width: rem(200);
         }
       }
       .el-form-item{

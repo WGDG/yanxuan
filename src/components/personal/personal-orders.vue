@@ -5,26 +5,29 @@
             <span class="FontFamily i-wodedingdan"></span>
             <span>我的订单</span>
           </div>
-          <span class="FontFamily i-arrow-right1"></span>
+          <router-link :to="{ path: '/dingdanliebiao' }">
+            <span class="FontFamily i-arrow-right1"></span>
+          </router-link>
+
         </div>
         <div class="personal-orders-wait">
           <ul>
-            <li>
+            <router-link :to="{ name: 'dingdanliebiao' }" tag="li">
               <span class="FontFamily i-daifukuan"></span>
               <div>待付款</div>
-            </li>
-            <li>
+            </router-link>
+            <router-link :to="{ name: 'dingdanliebiao' }" tag="li">
               <span class="FontFamily i-daifahuo"></span>
               <div>待发货</div>
-            </li>
-            <li>
+            </router-link>
+            <router-link :to="{ name: 'dingdanliebiao' }" tag="li">
               <span class="FontFamily i-daishouhuo"></span>
               <div>待收货</div>
-            </li>
-            <li>
+            </router-link>
+            <router-link :to="{ name: 'dingdanliebiao' }" tag="li">
               <span class="FontFamily i-daipingjia"></span>
               <div>待评价</div>
-            </li>
+            </router-link>
           </ul>
         </div>
     </div>

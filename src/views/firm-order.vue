@@ -18,7 +18,8 @@
 
       <div class="firm-order-footer">
         <div class="firm-order-footer-price">
-          合计：￥{{ alprice }}
+          合计： <span v-if="!surplus">￥{{ numbers.number * price.originalPrice}}</span>
+          <span v-if="surplus">￥{{ surplus }}</span>
         </div>
         <div class="submit" @click="submit">提交订单</div>
 
@@ -31,7 +32,15 @@
   import Indormation from '../components/firm-order/information'
   import ShoppingPrice from '../components/firm-order/shoppingPrice'
   import SlotHeaders from '../components/header/headers'
+  import Axios from 'axios'
+  import qs from 'qs'
+
   export default {
+    data() {
+      return{
+        orderNumber: ''
+      }
+    },
       components: {
         DefauleAddress,
         ProductList,
@@ -44,23 +53,44 @@
         window.history.back()
       },
       submit(){
-        let { morenress } = this.$store.state
-        if(morenress = '' || undefined) {
-          alert('你还没有添加地址，请去添加地址')
-        }else{
-          this.$router.push({ name: 'confirmPayment', params: { allprice: this.alprice } })
-        }
+        let  data  = JSON.parse(window.localStorage.getItem('yoursShopping'))
+        let { datas } = data[0]
+        console.log(datas);
+        let usertoken = JSON.parse(window.localStorage.getItem('usertoken'))
+        let {token, uid} = usertoken
+        // let { morenress } = this.$store.state
+        // if(morenress = '' || undefined) {
+        //   alert('你还没有添加地址，请去添加地址')
+        // }else{
+        //   this.$router.push({ name: 'confirmPayment', params: { allprice: this.numbers.num * this.price.originalPrice } })
+
+        // }
+        console.log(datas);
+        let dataing = [datas];
+
+        console.log(JSON.stringify(dataing))
+        let that = this
+        Axios.post(global.globalData.api + '/order/create?token=' + token + '&goodsJsonStr=' + 　encodeURIComponent(JSON.stringify(dataing)))
+        .then(res => {
+          console.log(res);
+          let { data, code } = res.data
+          if(code == 0){
+            that.orderNumber = data.orderNumber
+          }
+          this.$router.push({ name: 'confirmPayment', params: { allprice: this.numbers.number * this.price.originalPrice, orderNumber: that.orderNumber} })
+        })
       }
     },
     computed: {
       numbers() {
-        let { datas } = JSON.parse(window.localStorage.getItem('yoursShopping'))
-        console.log(datas);
+        let  data  = JSON.parse(window.localStorage.getItem('yoursShopping'))
+        console.log(data);
+        let { datas } = data[0]
         return datas
       },
       price() {
-        let { data } = JSON.parse(window.localStorage.getItem('yoursShopping'))
-        console.log(data);
+        let datas = JSON.parse(window.localStorage.getItem('yoursShopping'))
+        let { data } = datas[0]
         return data
       },
       alprice() {
@@ -68,7 +98,7 @@
           let { surplus } = JSON.parse(window.localStorage.getItem('yoursShopping'))
           return surplus
         }else{
-          return  this.numbers.num * this.price.originalPrice
+          return  this.numbers.number * this.price.originalPrice
         }
 
       },

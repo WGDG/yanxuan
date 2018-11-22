@@ -1,0 +1,41 @@
+.pingjia-content{
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+ .haoping{
+   width: 100%;
+   height: rem(145);
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   button{
+     border-radius: rem(30);
+     outline: none;
+     border: none;
+   }
+   button:hover{
+     background: #1aad19;
+   }
+ }
+  .textarea{
+    border: rem(3) solid red;
+    width: rem(800);
+    margin: 0 auto;
+    border-radius: rem(30);
+    textarea{
+      border: none;
+      outline: none;
+    }
+  }
+  .subpingjia{
+    text-align: right;
+    padding: rem(30) rem(150) rem(30) 0;
+    button{
+      width: rem(150);
+      height: rem(80);
+      border-radius: rem(20);
+      border: none;
+      outline: none;
+    }
+  }
+}

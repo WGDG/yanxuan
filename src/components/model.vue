@@ -146,14 +146,21 @@ data(){
           'logisticsType':0
         }
       ]
+      let guigeId = guigecc.id
+      let guigeid = guigec.id
+      let propertyChildIds = guigeId+':'+guigeid
+      let number = num
+      let goodsId = id
       let datas = {
+        goodsId,
         name,
         pic,
+        propertyChildIds,
         guigeccName,
         guigecName,
         colorcName,
         colorName,
-        num
+        number
       }
       console.log(guigecc.id);
       console.log(guigec.id);

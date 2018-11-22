@@ -1,4 +1,4 @@
--+<template>
+<template>
     <div class="price">
       <dl class="price-header">
         <dd ><slot name="header"><router-link :to=" { name: 'pricelist' } ">全民砍价<span class="FontFamily i-arrow-right"></span></router-link></slot></dd>

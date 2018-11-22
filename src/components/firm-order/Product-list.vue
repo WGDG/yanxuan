@@ -29,7 +29,7 @@
 
             </span>
 
-            <span class="p-l-s-price" v-if="!bargain"><span class="FontFamily i-chenghao" > </span>{{ nums.num }}</span>
+            <span class="p-l-s-price" v-if="!bargain"><span class="FontFamily i-chenghao" > </span>{{ nums.number }}</span>
           </p>
           <p></p>
         </div>
@@ -45,12 +45,13 @@
           return this.$store.state.basicInfo
         },
         yoursShopping() {
-          console.log(JSON.parse(window.localStorage.getItem('yoursShopping')));
-          let { data } = JSON.parse(window.localStorage.getItem('yoursShopping'))
+          let datas = JSON.parse(window.localStorage.getItem('yoursShopping'))
+          let { data } = datas[0]
           return data
         },
         nums() {
-          let { datas } = JSON.parse(window.localStorage.getItem('yoursShopping'))
+          let data = JSON.parse(window.localStorage.getItem('yoursShopping'))
+          let {datas} = data[0]
           return datas
         },
         surplus() {

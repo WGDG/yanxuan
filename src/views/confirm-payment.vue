@@ -16,14 +16,14 @@
               <span>￥ {{ allprice }}</span>
             </p>
             <p>
-              <span>订单号：11234234567890-</span>
+              <span>订单号：{{ orderNumber }}</span>
             </p>
           </div>
         </div>
         <default-address></default-address>
       </div>
       <div class="confirm-payment-footer" @click="payment">
-        微信付款￥0
+        微信付款￥{{ allprice }}
       </div>
     </div>
 </template>
@@ -39,6 +39,9 @@
       computed: {
         allprice() {
           return this.$route.params.allprice
+        },
+        orderNumber() {
+          return this.$route.params.orderNumber
         }
       },
       methods: {
@@ -46,7 +49,8 @@
         window.history.back()
       },
       payment(){
-        window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe93d3f996beab1eb&redirect_uri=http://www.wyunfei.com/&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'
+        console.log(this.$router);
+        window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe93d3f996beab1eb&redirect_uri=http://www.wyunfei.com/index1.html&response_type=code&scope=snsapi_userinfo&state=' + this.allprice
       }
     }
     }

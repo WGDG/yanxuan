@@ -1,6 +1,6 @@
 <template>
   <div class="address-header">
-    <span class="FontFamily i-fanhui" @click="goBack()"></span>
+    <span name="font" class="FontFamily i-fanhui" @click="goBack()"></span>
     <slot name="headers"></slot>
   </div>
 </template>
