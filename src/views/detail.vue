@@ -11,7 +11,6 @@
       <cart-model v-if="cartModel"></cart-model>
       <ping-tuan-model v-if="pingtuanModel"></ping-tuan-model>
       <detail-footer></detail-footer>
-
         <div class="top-left" @click="goBack()">
           <div class="top-left-font">
             <span class="FontFamily i-fanhui"></span>
@@ -29,6 +28,7 @@ import DetailShopping from '../components/detail/detail-shopping'
 import DetailFooter from '../components/detail/detail-footer'
 import Axios from 'axios'
 import Model from '../components/model'
+
 import CartModel from '../components/cartModel'
 import PingTuanModel from '../components/pingtuanModel'
 export default {

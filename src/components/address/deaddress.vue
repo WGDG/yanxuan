@@ -16,6 +16,7 @@
         <span>选择地区</span>
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
           <el-form-item>
+
             <el-select v-model="formInline.region.name" placeholder="请选择" @change="city(formInline.region.name)">
               <el-option v-model="item.name"  v-for="(item, index) in formInline.region"  :id="item.id" :key="index" ref="dataInfo"></el-option>
             </el-select>
@@ -24,9 +25,6 @@
               <el-option v-model="item.name" v-for="(item, index) in formInline.regions" :key="index"></el-option>
             </el-select>
 
-            <el-select v-model="formInline.regionss.name" placeholder="请选择">
-              <el-option label="北京" value="北京"></el-option>
-            </el-select>
           </el-form-item>
         </el-form>
       </div>
@@ -67,12 +65,14 @@
         code: ''
       }
     },
+
     created() {
       Axios.post('https://api.it120.cc/common/region/province').then(res => {
         let { data } = res.data
         this.formInline.region = data
       })
     },
+
     mounted() {
       console.log(this.$route.params);
       let { id } = this.$route.params
@@ -82,7 +82,9 @@
       this.address = address
       this.code = code
       let token = 'dcb9f8f9-35ca-440d-b66a-ebe0bee13932'
+
       Axios.post(global.globalData.api + '/user/shipping-address/update?token=' + token + '&id=' + id).then(res => {
+
         console.log(res);
       })
     },
@@ -96,7 +98,9 @@
         let { address, code, mobile, linkMan } = this
         let token = 'dcb9f8f9-35ca-440d-b66a-ebe0bee13932'
         // 详细地址 邮编                  电话     联系人
+
         Axios.post(global.globalData.api +'/user/shipping-address/add?address=' + address + '&cityId=' + regions + '&code=' + code + '&districtId=' + regionss + '&linkMan=' + linkMan + '&mobile=' + mobile + '&provinceId=' + region + '&token=' + token ).then(res => {
+
           console.log(res);
           let { data } = res.data
           // window.localStorage.setItem('data',JSON.stringify(data))
@@ -125,7 +129,6 @@
             if (code == 0) {
               alert('删除成功')
             }
-
           })
       }
     }

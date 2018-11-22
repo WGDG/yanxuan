@@ -16,6 +16,7 @@
               <span>￥ {{ allprice }}</span>
             </p>
             <p>
+
               <span>订单号：{{ orderNumber }}</span>
             </p>
           </div>
@@ -39,6 +40,7 @@
       computed: {
         allprice() {
           return this.$route.params.allprice
+
         },
         orderNumber() {
           return this.$route.params.orderNumber

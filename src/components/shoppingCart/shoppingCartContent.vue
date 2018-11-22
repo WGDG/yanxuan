@@ -30,7 +30,6 @@
           <div class="lovely">
             <div class="lovely-top">猜你喜欢</div>
             <div class="lovely-list">
-
               <dl v-for="(item, index) in loveList" :key="index">
                 <router-link :to="{ name: 'detail', params: { id: item.id } }">
                   <dt>
@@ -111,7 +110,6 @@ export default {
     // })
   }
 }
-
 </script>
 
 <style scoped>

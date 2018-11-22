@@ -27,7 +27,6 @@
           <el-select v-model="formInline.regionss.name" placeholder="请选择">
             <el-option label="北京" value="北京"></el-option>
           </el-select>
-
         </el-form-item>
       </el-form>
     </div>
@@ -106,8 +105,7 @@
             this.formInline.regions = data
             console.log(this.formInline.regions);
           })
-        },
-
+        }
       }
     }
 </script>

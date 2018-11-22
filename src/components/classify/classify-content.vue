@@ -43,7 +43,9 @@ export default {
     Banner
   },
   mounted() {
+
     Axios.post(global.globalData.api + '/shop/goods/category/all').then( res => {
+
       let { data } = res.data
       this.goodsList = data
       let list = data.filter(item => {
@@ -56,13 +58,17 @@ export default {
   methods: {
     // 所有分类
     all(){
+
       Axios.post(global.globalData.api + '/shop/goods/category/all').then( res => {
+
         let { data } = res.data
         this.goodsList = data
       })
     },
     live() {
+
       Axios.post(global.globalData.api + '/shop/goods/category/all').then( res => {
+
         let { data } = res.data
         let list = data.filter(item => {
           return item.type === 'jujia2'
@@ -80,7 +86,9 @@ export default {
       })
     },
     fuzhuang(){
+
       Axios.post(global.globalData.api + '/shop/goods/category/all').then( res => {
+
         let { data } = res.data
         let list = data.filter(item => {
           return item.type === 'fuzhuang2'

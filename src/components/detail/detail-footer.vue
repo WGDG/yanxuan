@@ -59,6 +59,7 @@ export default {
   methods: {
     model(){
       this.$store.commit('model')
+
     },
     addCart() {
       this.$store.commit('cartModel')

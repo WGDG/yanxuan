@@ -22,7 +22,6 @@
           <span v-if="surplus">￥{{ surplus }}</span>
         </div>
         <div class="submit" @click="submit">提交订单</div>
-
       </div>
     </div>
 </template>
@@ -32,6 +31,7 @@
   import Indormation from '../components/firm-order/information'
   import ShoppingPrice from '../components/firm-order/shoppingPrice'
   import SlotHeaders from '../components/header/headers'
+
   import Axios from 'axios'
   import qs from 'qs'
 
@@ -101,8 +101,7 @@
           return  this.numbers.number * this.price.originalPrice
         }
 
-      },
-
+      }
     },
     }
 </script>

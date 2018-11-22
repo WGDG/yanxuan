@@ -22,9 +22,11 @@ import Dingdanliebiao from '@/views/dingdanliebiao'
 import PingjaDetail from '@/components/pingjiaDetail'
 import Pingjia from '@/views/pingjia'
 
+
 Vue.use(Router)
 
 export default new Router({
+
  // mode: 'history',
   routes: [
     {

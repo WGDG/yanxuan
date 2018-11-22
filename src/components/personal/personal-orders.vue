@@ -8,7 +8,6 @@
           <router-link :to="{ path: '/dingdanliebiao' }">
             <span class="FontFamily i-arrow-right1"></span>
           </router-link>
-
         </div>
         <div class="personal-orders-wait">
           <ul>

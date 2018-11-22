@@ -46,8 +46,6 @@
             立即发起砍价，最低可看到{{ model.kanjiaPrice }}元
             </router-link>
           </div>
-
-
       </div>
     </div>
 </template>
@@ -67,6 +65,7 @@ data(){
 
   computed: {
     model() {
+
       //console.log(this.$store.state.basicInfo);
       return this.$store.state.basicInfo
     },
@@ -126,6 +125,7 @@ data(){
       }
     },
     buy(){
+
       //console.log(this.$store.state);
       let usertoken = JSON.parse(window.localStorage.getItem('usertoken'))
       let {token} = usertoken
@@ -156,6 +156,7 @@ data(){
         name,
         pic,
         propertyChildIds,
+
         guigeccName,
         guigecName,
         colorcName,
@@ -166,6 +167,7 @@ data(){
       console.log(guigec.id);
       console.log(colorc.id);
       console.log(color.id);
+
       Axios.post(global.globalData.api + '/shop/goods/price/?goodsId=' + id + '&propertyChildIds=' + guigecc.id +':'+guigec.id, colorc.id + ':' + color.id).then(res => {
         let { code } = res.data
         let { data } = res.data
@@ -174,6 +176,7 @@ data(){
           this.$router.push({path : '/firmOrder'})
 
           this.$store.commit('nums', {data,datas})
+
 
         }else {
           this.$router.push( { path: '/denglu' } )

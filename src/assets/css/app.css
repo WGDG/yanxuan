@@ -118,7 +118,8 @@
   .cart-list .shopping-list {
     width: 100%;
     border-top: 0.0444444444rem solid #ccc;
-    background: #fff; }
+    background: #fff;
+    height: 9.3333333333rem; }
     .cart-list .shopping-list .shopping-item {
       border-bottom: 0.0444444444rem solid #ccc;
       padding: 0.6666666667rem;
@@ -176,6 +177,9 @@
               font-size: 0.2518518519rem;
               background: #fff;
               outline: none; }
+    .cart-list .shopping-list .null-cart {
+      background: #f7f7f7;
+      line-height: 9.3333333333rem; }
 
 .lovely {
   background: #fff;
@@ -753,6 +757,7 @@
             color: #a3a3a3; }
 
 .box .boxq {
+  padding: 0 0.4444444444rem;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -1139,9 +1144,9 @@
         width: 70%;
         height: 1.7777777778rem;
         border: none; }
-      .new-address .add .contents .el-form, .new-address .add .contents .demo-form-inline, .new-address .add .contents .el-form--inline {
+      .new-address .add .contents .el-form, .new-address .add .contents demo-form-inline, .new-address .add .contents el-form--inline {
         width: 2.962962963rem; }
-        .new-address .add .contents .el-form input, .new-address .add .contents .demo-form-inline input, .new-address .add .contents .el-form--inline input {
+        .new-address .add .contents .el-form input, .new-address .add .contents demo-form-inline input, .new-address .add .contents el-form--inline input {
           padding: 0; }
       .new-address .add .contents .el-form-item__content {
         display: flex;
@@ -1173,6 +1178,7 @@
 
 .footer {
   width: 100%;
+  height: 2.4148rem;
   background: #fff;
   box-sizing: border-box; }
   .footer ul {
@@ -1181,48 +1187,47 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    align-items: center;
     font-size: 0.4444444444rem;
     border-top: 0.0740740741rem solid #ccc; }
     .footer ul .FontFamily {
       font-size: 1.0814814815rem; }
-    .footer ul li a {
-      color: #000; }
-    .footer ul li .router-link-exact-active {
-      color: red; }
-  .footer .bar-foot {
-    width: 100%;
-    height: 2.1481481481rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .footer .bar-foot .bar-foot-left {
-      width: 10.8888888889rem;
-      height: 2.1481481481rem;
-      line-height: 2.1481481481rem;
-      display: flex;
-      align-items: center;
-      border: none;
-      justify-content: space-between;
-      font-size: 0.5185185185rem;
-      padding-left: 0.6222222222rem;
-      padding-right: 0.6666666667rem; }
-      .footer .bar-foot .bar-foot-left .i-xuanzhong {
-        font-size: 0.7407407407rem;
-        color: #999; }
-      .footer .bar-foot .bar-foot-left .active {
+      .footer ul .FontFamily li a {
+        color: #000; }
+      .footer ul .FontFamily li .router-link-exact-active {
         color: red; }
-      .footer .bar-foot .bar-foot-left .bar-foot-left-font {
-        padding-left: 0.5925925926rem; }
-    .footer .bar-foot .bar-foot-right {
-      width: 5.1111111111rem;
+    .footer ul .bar-foot {
+      width: 100%;
       height: 2.1481481481rem;
-      line-height: 2.1481481481rem;
-      background: #b5282e;
-      font-size: 0.5925925926rem;
-      color: #fff; }
-    .footer .bar-foot .detail {
-      background: #999; }
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .footer ul .bar-foot .bar-foot-left {
+        width: 10.8888888889rem;
+        height: 2.1481481481rem;
+        line-height: 2.1481481481rem;
+        display: flex;
+        align-items: center;
+        border: none;
+        justify-content: space-between;
+        font-size: 0.5185185185rem;
+        padding-left: 0.6222222222rem;
+        padding-right: 0.6666666667rem; }
+        .footer ul .bar-foot .bar-foot-left .i-xuanzhong {
+          font-size: 0.7407407407rem;
+          color: #999; }
+        .footer ul .bar-foot .bar-foot-left .active {
+          color: red; }
+        .footer ul .bar-foot .bar-foot-left .bar-foot-left-font {
+          padding-left: 0.5925925926rem; }
+      .footer ul .bar-foot .bar-foot-right {
+        width: 5.1111111111rem;
+        height: 2.1481481481rem;
+        line-height: 2.1481481481rem;
+        background: #b5282e;
+        font-size: 0.5925925926rem;
+        color: #fff; }
+      .footer ul .bar-foot .detail {
+        background: #999; }
 
 .kanjia {
   width: 100%;

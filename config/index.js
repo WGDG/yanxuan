@@ -11,6 +11,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+
       // '/api': {//此处并非一定和url一致。
       //   target: 'https://api.it120.cc/small4',
       //   changeOrigin: true,//允许跨域
@@ -57,11 +58,13 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
+
     assetsPublicPath: './',
 
     /**
      * Source Maps
      */
+
 
     productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production

@@ -32,6 +32,7 @@ export default {
      }
    },
   created(){
+
     //console.log(global.globalData.Api);
     Axios.get(global.globalData.api + '/shop/goods/list').then( res => {
       let { data } = res.data

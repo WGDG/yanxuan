@@ -3,6 +3,7 @@
 
   <whole-price>
     <div slot="header" class="slot">
+
       <router-link to="/" class="fanhui"><span class="FontFamily i-fanhui"></span></router-link>
       <span >砍价列表<span class="FontFamily i-arrow-right"></span></span>
     </div>

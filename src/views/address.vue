@@ -49,9 +49,9 @@
       },
       created(){
         let token = 'dcb9f8f9-35ca-440d-b66a-ebe0bee13932'
+
         Axios.post(global.globalData.api/user + '/shipping-address/list?token=' + token).then(res => {
           console.log(res);
-
           let { data } = res.data
           this.disList = data
         })

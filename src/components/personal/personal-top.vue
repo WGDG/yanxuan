@@ -1,6 +1,7 @@
 <template>
     <div class="personal-top">
       <ul>
+
         <router-link class="head-sculpture" :to="{ name: 'login' }" tag="li">
           <img src="../../assets/images/6_07.gif" alt="">
         </router-link>

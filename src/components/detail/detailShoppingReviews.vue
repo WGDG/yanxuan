@@ -16,23 +16,24 @@
 </template>
 
 <script>
+
   import Axios from 'axios'
     export default {
-    data() {
-      return{
-        dataList: []
-      }
-    },
-        created() {
-          let { id } = this.$route.params
-          console.log(this.$route.params);
-          Axios.post(global.globalData.api + '/shop/goods/reputation?goodsId=' + id).then(res => {
-            console.log(res);
-            let { data } = res.data
-            this.dataList = data
-          })
-
+      data() {
+        return {
+          dataList: []
         }
+      },
+      created() {
+        let {id} = this.$route.params
+        console.log(this.$route.params);
+        Axios.post(global.globalData.api + '/shop/goods/reputation?goodsId=' + id).then(res => {
+          console.log(res);
+          let {data} = res.data
+          this.dataList = data
+        })
+
+      }
     }
 </script>
 

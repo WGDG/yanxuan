@@ -7,44 +7,44 @@
   }
 }
 
-.cart-list{
+.cart-list {
   width: 100%;
-  .null-cart{
+  .null-cart {
     background: #f7f7f7;
     height: rem(630);
     line-height: rem(630);
   }
-  .shopping-list{
+  .shopping-list {
     width: 100%;
     border-top: rem(3) solid #ccc;
 
     background: #fff;
-    .shopping-item{
+    .shopping-item {
       border-bottom: rem(3) solid #ccc;
       padding: rem(45);
       box-sizing: border-box;
       display: flex;
       align-items: center;
-      .i-xuanzhong{
+      .i-xuanzhong {
         font-size: rem(40);
         color: #999;
       }
-      .active{
+      .active {
         color: red;
       }
       .actived {
         color: #999;
       }
-      .shopping-item-img{
+      .shopping-item-img {
         width: rem(230);
         height: rem(230);
         margin: 0 rem(80) 0 rem(50);
-        img{
+        img {
           border-radius: rem(30);
           border-bottom-right-radius: rem(0);
         }
       }
-      .shopping-name{
+      .shopping-name {
         width: rem(595);
         height: rem(245);
         font-size: rem(37);
@@ -55,20 +55,20 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        .shopping-name-button{
-          display:flex;
+        .shopping-name-button {
+          display: flex;
           justify-content: space-between;
           font-size: rem(27);
-          span{
+          span {
             color: red;
           }
-          .number{
+          .number {
             display: flex;
             width: rem(235);
             height: rem(75);
             border-radius: rem(10);
             border: rem(5) solid #999;
-            .numbers{
+            .numbers {
               width: rem(93);
               height: rem(75);
               line-height: rem(75);
@@ -77,7 +77,7 @@
               border-left: rem(5) solid #999;
               border-right: rem(5) solid #999;
             }
-            button{
+            button {
               width: rem(67);
               border: none;
               font-size: rem(17);
@@ -88,9 +88,17 @@
         }
       }
     }
-  }
-}
 
+    height: rem(630);
+
+    .null-cart {
+      background: #f7f7f7;
+      line-height: rem(630);
+
+    }
+  }
+
+}
 .lovely{
   background: #fff;
   width: 100%;

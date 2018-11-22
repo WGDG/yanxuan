@@ -9,8 +9,10 @@ let store = new Vuex.Store({
     content: {},
     specialList: [],
     code: false,
+
     coding: false,
     pingtuancode: false,
+
     guige: [],
     num: 1,
     guigec:[],
@@ -172,7 +174,6 @@ let store = new Vuex.Store({
       state.yoursShopping = payLoad
       window.localStorage.setItem('yoursShopping', JSON.stringify(state.yoursShopping))
     }
-
   }
 })
 

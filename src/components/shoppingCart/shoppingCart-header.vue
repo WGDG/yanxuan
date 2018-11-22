@@ -7,11 +7,13 @@
 
 <script>
     export default {
+
         methods: {
           bian() {
             this.$store.commit('bian')
           }
         }
+
     }
 </script>
 
